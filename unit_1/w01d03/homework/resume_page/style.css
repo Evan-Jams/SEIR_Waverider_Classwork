@@ -28,25 +28,40 @@ img {
 
 nav {
   text-align: center;
+  padding-bottom: 15px;
+}
+
+h2 {
+  font-family: sans-serif;
+  padding: 0px;
+}
+
+#exp {
+  text-align: center;
   border: 2px solid black;
+  padding: 8px;
+  float: left;
 }
 
 p {
   padding: 10px;
 }
 
-li {
-  color: blue;
+article {
+  text-align: center;
+}
+
+ul {
   display: inline;
   padding: 10px;
+  list-style: none;
+}
+
+li {
+  text-decoration: none;
 }
 
 a {
   text-decoration: none;
   padding: 15px;
-}
-
-footer {
-  background-color: rgba(0, 0, 0, .1);
-  margin: 0 auto;
 }
