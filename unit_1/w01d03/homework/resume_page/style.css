@@ -1,0 +1,22 @@
+body {
+  background-color: rgba(200, 240, 255, .5);
+}
+
+h1 {
+  font-size: 25px;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+  padding: 20px;
+  margin: auto;
+}
+
+nav {
+  text-align: center;
+}
+
+li {
+  color: blue;
+  display: inline;
+  padding: 10px;
+}
