@@ -3,6 +3,7 @@ body {
 }
 
 h1 {
+  font-family: sans-serif;
   font-size: 30px;
   text-align: center;
   text-decoration: underline;
@@ -14,6 +15,7 @@ h1 {
 h3 {
   text-align: center;
   font-size: 25px;
+  color: rgba(200, 50, 0, .8);
 }
 
 img {
@@ -26,6 +28,11 @@ img {
 
 nav {
   text-align: center;
+  border: 2px solid black;
+}
+
+p {
+  padding: 10px;
 }
 
 li {
