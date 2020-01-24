@@ -1,28 +1,28 @@
-//--------------------------------------------------------------//
+//------------------------------------------------------------//
 //Part 1
-//---------------//
+//-----------------//
 // 4 -feel good, but like extra review
 
 
-//--------------------------------------------------------------//
+//------------------------------------------------------------//
 //Part 2: Easy Going
-//---------------//
+//-----------------//
 for (let i = 1; i <= 20; i++) {
   // console.log(i);
 }
 
-//--------------------------------------------------------------//
+//------------------------------------------------------------//
 //Get Even
-//---------------//
+//-----------------//
 for (let i = 0; i <= 200; i++) {
   if (i % 2 === 0) {
     // console.log(i);
   }
 }
 
-//--------------------------------------------------------------//
+//------------------------------------------------------------//
 //Fizz Buzz
-//---------------//
+//-----------------//
 for (let i = 1; i <= 100; i++) {
   // console.log(i);
 }
@@ -51,9 +51,9 @@ for (let i = 1; i <= 100; i++) {
   }
 }
 
-//-------------------------------------------------------------//
+//------------------------------------------------------------//
 //Wild Wild Life
-//---------------//
+//-----------------//
 const wolfy = ["Wolfy", "wolf", 16, "Yukon Territory"]
 const sharky = ["Sharky", "shark", 20, "Left Coast"]
 const plantee = ["Plantee", "plant",  5000 , "Mordor"]
@@ -72,9 +72,9 @@ dart.push("Hawkins")
 wolfy.splice(0, 1, "Gameboy")
 // console.log(wolfy);
 
-//-------------------------------------------------------------//
+//------------------------------------------------------------//
 //Yell at the Ninja Turtles
-//---------------//
+//-----------------//
 const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
 
 // console.log(favMovies.indexOf('Titanic'));
@@ -130,3 +130,30 @@ whereIsWaldo[1][2] = "No One"
 console.log(whereIsWaldo);
 
 console.log(whereIsWaldo[2][1][1]);
+
+//------------------------------------------------------------//
+//Excited Kitten
+//-----------------//
+for (let i = 1; i <= 20; i++) {
+  console.log("Love me, pet me! HSSSSSS!", i);
+}
+
+const catResponses = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."]
+
+
+for (let i = 0; i <= 20; i++) {
+  if (i % 2 === 0) {
+    console.log(catResponses[Math.floor(Math.random() * catResponses.length)]);
+}
+}
+//Took me FOREVER! But I think I got it.
+//------------------------------------------------------------//
+//Find the median
+//-----------------//
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
+nums.sort()
+console.log(nums);
+
+console.log((nums[Math.floor(nums.length / 2)]));
+//15
