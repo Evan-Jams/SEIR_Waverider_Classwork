@@ -1,57 +1,57 @@
-//---------------//
+//--------------------------------------------------------------//
 //Part 1
 //---------------//
 // 4 -feel good, but like extra review
 
 
-//---------------//
+//--------------------------------------------------------------//
 //Part 2: Easy Going
 //---------------//
 for (let i = 1; i <= 20; i++) {
-  console.log(i);
+  // console.log(i);
 }
 
-//---------------//
+//--------------------------------------------------------------//
 //Get Even
 //---------------//
 for (let i = 0; i <= 200; i++) {
   if (i % 2 === 0) {
-    console.log(i);
+    // console.log(i);
   }
 }
 
-//---------------//
+//--------------------------------------------------------------//
 //Fizz Buzz
 //---------------//
 for (let i = 1; i <= 100; i++) {
-  console.log(i);
+  // console.log(i);
 }
 
 for (let i = 1; i <= 100; i++) {
   if (i % 3 === 0) {
-    console.log('Fizz');
+    // console.log('Fizz');
   } else {
-    console.log(i);
+    // console.log(i);
   }
 }
 
 for (let i = 1; i <= 100; i++) {
   if (i % 5 === 0) {
-    console.log('Buzz');
+    // console.log('Buzz');
   } else {
-    console.log(i);
+    // console.log(i);
   }
 }
 
 for (let i = 1; i <= 100; i++) {
   if (i % 3 === 0 && i % 5 === 0) {
-    console.log('FizzBuzz');
+    // console.log('FizzBuzz');
   } else {
-    console.log(i);
+    // console.log(i);
   }
 }
 
-//---------------//
+//-------------------------------------------------------------//
 //Wild Wild Life
 //---------------//
 const wolfy = ["Wolfy", "wolf", 16, "Yukon Territory"]
@@ -61,13 +61,57 @@ const porgee = ["Porgee", "Porg", 186, "Ahch-To"]
 const dart = ["D'Art" , "Demogorgan Dog", 2, "Upside Down"]
 
 plantee[2] = 5001
-console.log(plantee);
+// console.log(plantee);
 
 wolfy[3] = "Gotham City"
-console.log(wolfy);
+// console.log(wolfy);
 
 dart.push("Hawkins")
-console.log(dart);
+// console.log(dart);
 
 wolfy.splice(0, 1, "Gameboy")
-console.log(wolfy);
+// console.log(wolfy);
+
+//-------------------------------------------------------------//
+//Yell at the Ninja Turtles
+//---------------//
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+
+// console.log(favMovies.indexOf('Titanic'));
+//
+// console.log(favMovies.sort());
+// //put all elements into A-Z order
+// console.log(favMovies);
+// //Permanent
+
+// console.log(favMovies.pop());
+// console.log(favMovies);
+//
+// favMovies.push('Guardians of the Galaxy')
+// console.log(favMovies);
+//
+// favMovies.reverse()
+// console.log(favMovies);
+//
+// console.log(favMovies.shift());
+// console.log(favMovies);
+//
+// console.log(favMovies.unshift('Jaws'));
+// console.log(favMovies);
+// //returns new length of array after adding a new element (which is optional)
+//
+// console.log(favMovies.indexOf('Django Unchained'));
+// favMovies.splice(3, 1, 'Avatar')
+// console.log(favMovies);
+// //permanent
+//
+// console.log(favMovies.length);
+// console.log((favMovies[Math.floor(favMovies.length / 2)]));
+// console.log(favMovies.slice(0, 9))
+// console.log(favMovies);
+// //Not permanent
+// let sliced = favMovies.slice(0, 9)
+// console.log(sliced);
+// //storing the first half of the array in 'sliced'
+// console.log(favMovies.indexOf('Fast and Furious'));
+// //We get the value -1 ? weird
