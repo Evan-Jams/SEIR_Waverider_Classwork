@@ -34,40 +34,72 @@
 // Sum Array //
 //-----------------------------------------------//
 
-const sumArray = (arr) => {
-  let a = 0
-  for (let i = 0; i < arr.length; i++) {
-    a += arr[i]
-  }
-console.log(a);
-}
-
-
-sumArray([1, 2, 3, 4])
+// const sumArray = (arr) => {
+//   let a = 0
+//   for (let i = 0; i < arr.length; i++) {
+//     a += arr[i]
+//   }
+// console.log(a);
+// }
+//
+//
+// sumArray([1, 2, 3, 4])
 
 //-----------------------------------------------//
 // Prime Numbers //
 //-----------------------------------------------//
 
-const checkPrime = (num) => {
-  if (isNaN(num) || !isFinite(num) || num % 1 || num < 2) return false;
-  if (num % 2 == 0) return (num == 2);
-  if (num % 3 == 0) return (num == 3);
-  let m = Math.sqrt(num);
-  for (let i = 5; i <= m; i += 6) {
-    if (num % i == 0) return false;
-    if (num % (i + 2) == 0) return false;
- }
- return true;
+// const checkPrime = (num) => {
+//   if (isNaN(num) || !isFinite(num) || num % 1 || num < 2) return false;
+//   if (num % 2 == 0) return (num == 2);
+//   if (num % 3 == 0) return (num == 3);
+//   let m = Math.sqrt(num);
+//   for (let i = 5; i <= m; i += 6) {
+//     if (num % i == 0) return false;
+//     if (num % (i + 2) == 0) return false;
+//  }
+//  return true;
+// }
+//
+// console.log(checkPrime(3));
+//
+// const printPrime = () => {
+//   for (let i = 0; i <= 97; i++) {
+//     if (checkPrime(i) === true) {
+//       console.log(i);
+//     }
+// }
+// }
+// printPrime()
+
+
+//-----------------------------------------------//
+// Rock Paper Scissors //
+//-----------------------------------------------//
+const moves = ['rock', 'paper', 'scissors']
+const randomMove = () => {
+  return (moves[Math.floor(Math.random() * moves.length)]);
 }
-
-console.log(checkPrime(3));
-
-const printPrime = () => {
-  for (let i = 0; i <= 97; i++) {
-    if (checkPrime(i) === true) {
-      console.log(i);
+console.log(randomMove());
+let computersMove = randomMove()
+let usersMove = randomMove()
+let a = moves[0]
+let b = moves[1]
+let c = moves[2]
+const rockPaperScissors = (comp, user) => {
+  console.log('computer chose', comp);
+  console.log('user chose', user);
+    a > c
+    b > a
+    c > b
+    if (comp > user) {
+      return (comp, 'beats', user, 'comp wins')
+    } else if (comp < user) {
+      return (user, 'beats', comp, 'user wins')
+    } else {
+      return ('tied, go again');
     }
-}
-}
-printPrime()
+  }
+
+
+console.log(rockPaperScissors(computersMove, usersMove))
