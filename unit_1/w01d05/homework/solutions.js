@@ -21,11 +21,26 @@
 // }
 //--------First Attempt-------------//
 
-const checkPalindrome = (str) => {
-  let lowerCaseStr = str.toLowerCase();
-  let reverseStr = lowerCaseStr.split("").reverse().join("");
-  return lowerCaseStr === reverseStr
-}
-console.log(checkPalindrome("Radar"));
-console.log(checkPalindrome("Borscht"));
+// const checkPalindrome = (str) => {
+//   let lowerCaseStr = str.toLowerCase();
+//   let reverseStr = lowerCaseStr.split("").reverse().join("");
+//   return lowerCaseStr === reverseStr
+// }
+// console.log(checkPalindrome("Radar"));
+// console.log(checkPalindrome("Borscht"));
 //---------Simpler Solution---------//
+
+//-----------------------------------------------//
+// Sum Array //
+//-----------------------------------------------//
+
+const sumArray = (arr) => {
+  let a = 0
+  for (let i = 0; i < arr.length; i++) {
+    a += arr[i]
+  }
+console.log(a);
+}
+
+
+sumArray([1, 2, 3, 4])
