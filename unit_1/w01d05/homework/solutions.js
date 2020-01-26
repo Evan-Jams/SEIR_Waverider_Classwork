@@ -44,3 +44,30 @@ console.log(a);
 
 
 sumArray([1, 2, 3, 4])
+
+//-----------------------------------------------//
+// Prime Numbers //
+//-----------------------------------------------//
+
+const checkPrime = (num) => {
+  if (isNaN(num) || !isFinite(num) || num % 1 || num < 2) return false;
+  if (num % 2 == 0) return (num == 2);
+  if (num % 3 == 0) return (num == 3);
+  let m = Math.sqrt(num);
+  for (let i = 5; i <= m; i += 6) {
+    if (num % i == 0) return false;
+    if (num % (i + 2) == 0) return false;
+ }
+ return true;
+}
+
+console.log(checkPrime(3));
+
+const printPrime = () => {
+  for (let i = 0; i <= 97; i++) {
+    if (checkPrime(i) === true) {
+      console.log(i);
+    }
+}
+}
+printPrime()
