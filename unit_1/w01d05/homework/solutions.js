@@ -81,11 +81,13 @@ const randomMove = () => {
   return (moves[Math.floor(Math.random() * moves.length)]);
 }
 console.log(randomMove());
+
 let computersMove = randomMove()
 let usersMove = randomMove()
 let a = moves[0]
 let b = moves[1]
 let c = moves[2]
+
 const rockPaperScissors = (comp, user) => {
   console.log('computer chose', comp);
   console.log('user chose', user);
@@ -102,4 +104,4 @@ const rockPaperScissors = (comp, user) => {
   }
 
 
-console.log(rockPaperScissors(computersMove, usersMove))
+console.log(rockPaperScissors(computersMove, usersMove));
