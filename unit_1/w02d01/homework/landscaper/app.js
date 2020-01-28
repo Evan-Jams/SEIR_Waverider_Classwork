@@ -7,61 +7,68 @@ const tools = [
 
 {
   name: 'Teeth',
-  cost: 0,
+  cost: 5,
   payout: 1
 },
 
 {
   name: 'Rusty Scissors',
-  cost: 5,
+  cost: 25,
   payout: 5
 },
 
 {
   name: 'Old-timey Push Lawnmower',
-  cost: 25,
+  cost: 250,
   payout: 50
 },
 
 {
   name: 'New Lawn Mower',
-  cost: 250,
+  cost: 500,
   payout: 100
 },
 
 {
   name: 'Team of Starving Students',
-  cost: 500,
+  cost: 0,
   payout: 250
 }
 ]
 
 
 // console.log(tools[0 + 1].name)
-//Write a function that adds one to the index of tools array
-const upgraded = (i) => {
-  return (tools[i + 1].name)
+//Write a function that adds one to the index of tools array when the user can upgrade, and subtracts tools.cost from total money
+const upgraded = () => {
+  if (i < tools.length - 1) {
+  i += 1
+  totalMoney -= cost
+  console.log(i)
+  start(i)
 }
-
-// console.log(upgraded(0));
+}
+// console.log(upgraded());
 
 
 
 
 alert('You are starting a landscaping business, but all you have are your teeth')
+let i = 0
+let tool = tools.name
+let money = tools.payout
+let cost = tools.cost
 
-
-let money
-
-const start = () => {
-  tool = tools[0].name
-  money = 0
+const start = (i) => {
+  tool = tools[i].name
+  money = tools[i].payout
+  cost = tools[i].cost
+  totalMoney = 0
 
   askForAction()
 }
 
 const showStatus = () => {
-  alert(`You are using your ${tool} and have $${money}`)
+  alert(`You are using your ${tool} and have $${totalMoney}`)
 }
 
 const askForAction = () => {
@@ -70,8 +77,8 @@ const askForAction = () => {
   console.log(choice);
   //make cancel button work
   if (!choice) {
-    alert('Uh Oh! You\'ve ended your progress!')
-    return
+    alert('Uh Oh! You\'ve erased your progress!')
+    return('restarted')
   }
   //make choices for options
   if (choice === '1') {
@@ -86,11 +93,18 @@ const askForAction = () => {
 }
 
 const cutGrass = () => {
-  money++
+  totalMoney += money
   askForAction()
 }
 
 const getUpgrade = () => {
+  if (totalMoney >= cost ) {
+    upgraded()
+  } else if (i === 3){
+    alert('You have no more upgrades available')
+  } else {
+    alert('You do not have enough money for upgrade, keep cutting!')
+  }
   askForAction()
 }
-start()
+start(i)
