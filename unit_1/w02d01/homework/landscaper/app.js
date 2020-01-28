@@ -40,7 +40,7 @@ const tools = [
 // console.log(tools[0 + 1].name)
 //Write a function that adds one to the index of tools array when the user can upgrade, and subtracts tools.cost from total money
 const upgraded = () => {
-  if (i < tools.length - 1) {
+  if (i < (tools.length - 1)) {
   i += 1
   totalMoney -= cost
   console.log(i)
@@ -49,20 +49,17 @@ const upgraded = () => {
 }
 // console.log(upgraded());
 
-
-
-
 alert('You are starting a landscaping business, but all you have are your teeth')
 let i = 0
 let tool = tools.name
 let money = tools.payout
 let cost = tools.cost
+let totalMoney = 0
 
 const start = (i) => {
   tool = tools[i].name
   money = tools[i].payout
   cost = tools[i].cost
-  totalMoney = 0
 
   askForAction()
 }
@@ -78,33 +75,40 @@ const askForAction = () => {
   //make cancel button work
   if (!choice) {
     alert('Uh Oh! You\'ve erased your progress!')
-    return('restarted')
+    return('user did not enter a valid option')
   }
   //make choices for options
   if (choice === '1') {
     cutGrass();
-  } else if (choice === '2'){
+  } else if (choice === '2') {
     getUpgrade();
   } else if (choice === '3') {
     console.log('Restarted');
+    return
   } else {
     console.log('uh oh! somethings wrong');
   }
 }
 
+
 const cutGrass = () => {
   totalMoney += money
+  if(totalMoney >= 1000) {
+    alert('You\'ve Won! Congratulations!')
+    return
+  }
   askForAction()
 }
 
 const getUpgrade = () => {
-  if (totalMoney >= cost ) {
+  if (totalMoney >= cost) {
     upgraded()
-  } else if (i === 3){
+  } else if (i === 4){
     alert('You have no more upgrades available')
   } else {
     alert('You do not have enough money for upgrade, keep cutting!')
   }
   askForAction()
 }
+
 start(i)
