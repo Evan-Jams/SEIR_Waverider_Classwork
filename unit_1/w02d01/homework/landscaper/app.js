@@ -112,3 +112,9 @@ const getUpgrade = () => {
 }
 
 start(i)
+
+
+
+//====================================================================//
+//===== Can't Get My code to stop calling function 'askForAction'=====//
+//================ Just keeps calling after winning ==================//
