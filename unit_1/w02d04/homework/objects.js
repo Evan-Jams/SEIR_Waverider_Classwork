@@ -26,40 +26,74 @@ class Person {
     this.bankAccount = 0;
   }
   getName(){
-    return this.name
+    return this.name;
   }
   getAge(){
-    return this.age
+    return this.age;
   }
   getWeight(){
-    return this.weight
+    return this.weight;
   }
   greet(){
     console.log(`Hi, my name is ${name}`);
   }
   eat(){
-    this.weight++
-    this.mood++
+    this.weight++;
+    this.mood++;
   }
   exercise(){
-    this.weight--
+    this.weight--;
   }
   ageUp(){
-    this.age++
-    this.height++
-    this.weight++
-    this.mood--
-    this.bankAccount + 10
+    this.age++;
+    this.height++;
+    this.weight++;
+    this.mood--;
+    this.bankAccount += 10;
   }
-  buyHamster(){
-    const newHamster = new Hamster(this.name, 'ham' + this.hamsters.length)
-    this.hamsters.push(newHamster);
-    this.mood += 10
-    this.bankAccount -= newHamster.getPrice()
+  buyHamster(ham){
+    // const newHamster = new Hamster(this.name, name);
+    this.hamsters.push(ham);
+    this.mood += 10;
+    this.bankAccount -= ham.getPrice();
 
   }
 }
 
-const evan = new Person('Evan');
+// const evan = new Person('Evan');
+//
+// console.log(evan);
 
-console.log(evan);
+
+const timmy = new Person('Timmy');
+while (timmy.age < 5) {timmy.ageUp()}
+// console.log(timmy);
+
+for (let i = 0; i < 5; i++){
+  timmy.eat()
+}
+// console.log(timmy);
+
+for (let i = 0; i < 5; i++){
+  timmy.exercise()
+}
+// console.log(timmy);
+
+for (let i = 0; i < 9; i++){
+  timmy.ageUp()
+}
+// console.log(timmy);
+
+const gus = new Hamster('Timmy', 'Gus')
+
+timmy.buyHamster(gus);
+// console.log(timmy);
+
+for (let i = 0; i < 15; i++){
+  if (i < 2){
+    timmy.eat()
+    timmy.exercise()
+  }
+  timmy.ageUp()
+}
+console.log(timmy);
