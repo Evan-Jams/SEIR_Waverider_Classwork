@@ -1,0 +1,11 @@
+* {
+  border: 1px solid silver;
+}
+
+img {
+  width: 20%;
+}
+
+nav {
+  display: flex;
+}
