@@ -4,7 +4,7 @@ class Hero {
   constructor(name) {
     this.name = name;
     this.health = 100;
-    this.weapon = {
+    this.weapons = {
       sprinkleSpray: 5,
       sugarShock: 10
     };
@@ -49,3 +49,30 @@ class Enemy {
 }
 
 const pizzaRat = new Enemy('Pizza Rat');
+
+dougie.talkSass()
+pizzaRat.talkSmack()
+dougie.announceHealth()
+pizzaRat.announceHealth()
+
+
+// dougie.fight() = () => {
+//   console.log(Object.keys(this.weapons)[Math.floor(Math.random()*Object.keys(this.weapons).length)]);
+// }
+//
+// dougie.fight()
+
+ // console.log(Object.keys(this.weapons)[Math.floor(Math.random()*Object.keys(this.weapons).length)]) = dougie.fight()
+
+// let newFight = () => {
+//   return(Object.keys(this.weapons)[Math.floor(Math.random()*Object.keys(this.weapons).length)])
+// }
+//
+// newFight = dougie.fight()
+// newFight = pizzaRat.fight()
+// dougie.newFight()
+// pizzaRat.newFight()
+
+//=================================================
+// Couldn't Figure out how to make them fight. I couldn't figure out how to upgrade their fight methods. Spent a few hours researching and still no luck.
+//=================================================
