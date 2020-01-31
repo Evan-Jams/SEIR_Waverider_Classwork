@@ -96,4 +96,4 @@ for (let i = 0; i < 15; i++){
   }
   timmy.ageUp()
 }
-console.log(timmy);
+console.log(timmy.hamsters);
