@@ -1,3 +1,12 @@
+//============================================================================//
+//========= Partner was Vikram Sharma, we didn't really share code with each other, other than an example or two just to get an idea of what each other was doing in case we were stuck on a particular spot
+//=============================================================================//
+
+
+
+
+
+
 // Make a Spaceship class for framework of my USS Schwarzenegger and Enemy factory
 class SpaceShip {
     constructor(name, hull, firepower, accuracy) {
