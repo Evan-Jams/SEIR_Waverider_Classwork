@@ -4,9 +4,6 @@
 
 
 
-
-
-
 // Make a Spaceship class for framework of my USS Schwarzenegger and Enemy factory
 class SpaceShip {
     constructor(name, hull, firepower, accuracy) {
@@ -107,7 +104,7 @@ const ussSchwarzenegger = new SpaceShip('USS Schwarzenegger', 20, 5, .7)
 
 const alien = new AlienFactory('Alien')
 for (let i = 0; i < 6; i++) {
-alien.generateEnemy();
+    alien.generateEnemy();
 }
 
 // ussSchwarzenegger.attack(alien.fleet[0]);
@@ -129,7 +126,7 @@ let i = 0;
 
 const askToContinue = () => {
     if (i >= 5) {
-        alert('Congrats')
+        alert('Congradulations! You have saved the planet!')
         // endGame();
     } else {
     let choice2 = prompt('(1) Attack Next Enemy ship / (2) Retreat like a wimp');
