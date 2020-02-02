@@ -32,6 +32,9 @@ class SpaceShip {
         // If hull remains > 0, attack again.
         // If hull reaches 0, alert loss of game.
     }
+    retreat() {
+        alert ('Afraid to die for your planet huh?');
+    }
 }
 
 // Making an Enemy Factory
@@ -65,9 +68,7 @@ class Enemy {
         }
         // If hull is > 0 after first attack from ussSchwarzenegger, attack
     }
-    retreat() {
-        alert ('Afraid to die for your planet huh?');
-    }
+
 }
 
 
@@ -115,24 +116,28 @@ const showStatus = () => {
 
 }
 
-let i = 1;
+let i = 0;
 
 const askToContinue = () => {
-    let choice2 = prompt('(1) Attack Enemy ship / (2) Retreat like a wimp');
+    if (i >= 5) {
+        alert('Congrats')
+        // endGame();
+    } else {
+    let choice2 = prompt('(1) Attack Next Enemy ship / (2) Retreat like a wimp');
     if (choice2 === null) {
         alert('Sorry to see you go, thank you for your service!')
         return('Player has left')
-    } else if (choice2 === '1') {
-        do {
-            ussSchwarzenegger.attack(alien.fleet[i]);
-            i += 1;
-            askToContinue();
-        } while (i < (alien.fleet.length - 1));
-            alert('Congradulations Warrior! You have saved the planet!!');
-            return('Player has won!');
+    } else if (choice2 === '1' && i < 5) {
+        i += 1;
+        ussSchwarzenegger.attack(alien.fleet[i]);
+        askToContinue();
     } else if (choice2 === '2') {
         ussSchwarzenegger.retreat();
     }
+    // else if (i >= 5){
+    //     alert('Congrats')
+    // }
+}
 }
 
 const askForAction = () => {
@@ -146,7 +151,7 @@ const askForAction = () => {
         alert('Sorry, that is not an option. Try that again');
         askForAction();
     } else if (choice === '1') {
-        ussSchwarzenegger.attack(alien.fleet[0]);
+        ussSchwarzenegger.attack(alien.fleet[i]);
         askToContinue();
     }
 }
@@ -157,3 +162,7 @@ const start = () => {
 }
 
 start()
+
+// const endGame = () => {
+//     alert('Go get yourself a victory drink! (age allowing)')
+// }
