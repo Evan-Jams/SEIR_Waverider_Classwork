@@ -2,10 +2,14 @@
     border: 1px solid black;
 } */
 body {
-    margin: 2.5% 8%;
+    margin: 2.5% 5%;
     background-color: rgb(245, 245, 245);
     font-family: 'Ubuntu', sans-serif;
 
+
+}
+header {
+    width: 90vw;
 }
 
 nav {
@@ -19,7 +23,7 @@ nav {
 a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 .banner {
     display: flex;
@@ -27,50 +31,61 @@ a {
     align-items: center;
     background-image: url(imgs/banner.png);
     background-size: cover;
-    height: 500px;
+    height: 38vw;
 }
 
 .banner > div {
-    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 38%;
+    height: 50%;
     text-align: right;
-    margin-right: 40px;
+    margin-right: 5%;
 
 }
 
+h1, h2 {
+    left: 50%;
+    top: 50%;
+}
+
 h1 {
+    height: 30%;
     font-size: 5vw;
     letter-spacing: .1em;
     margin: 0;
     text-shadow: 4px 4px white;
     width: 100%;
+    color: rgb(151, 177, 184)
 }
 
 h2 {
     float: right;
     text-align: center;
-    font-size: 1.3em;
-    padding: 10px 0;
+    font-size: 1.3vw;
+    padding: 2% 0;
     color: rgb(246, 157, 177);
     background-color: #fff;
-    width: 350px;
+    width: 80%;
     margin: 0;
 }
 
 section {
-    /* margin: 2.3% 0; */
+    width: 90vw;
 }
 
 .section-columns {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 2.5% 0;
 }
 
 .cards {
     background-color: #fff;
     box-shadow: 5px 5px 2px gainsboro;
-    height: 30%;
     width: 30%;
     padding: 2px 0;
     margin: 0;
@@ -92,37 +107,35 @@ section {
 }
 
 .card-footer > h3 {
-    /* display: flex;
-    justify-content: space-between;
-    flex-direction: row; */
-    /* display: inline-block; */
-    /* margin-right: 15px; */
     width: 60%;
+    font-size: 1.8vw;
 }
 
 .card-tags {
     display: flex;
     justify-content: flex-start;
+    align-items: baseline;
     flex-wrap: wrap;
-    /* font-size: .2em; */
-    margin: 8% 0;
+    margin: 8% 0 0 0;
+    vertical-align: bottom;
 }
 
 .card-tags > .tags {
     margin: 2%;
     background-color: rgb(238, 238, 238);
-    padding: 3%;
+    padding: 2%;
     font-size: .2em;
     font-weight: 100;
-    height: 5%;
+    height: 3%;
     text-align: center;
+    align-content: center;
+
 }
 
 footer {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    width: 100%;
+    width: 90vw;
     height: 15vw;
     background-color: rgb(238, 238, 238);
 }
@@ -155,6 +168,7 @@ h4 {
 
 h3 {
     text-align: left;
+    font-size: 1.5em;
     width: 80%;
     padding: 0;
     margin: 0;
@@ -172,12 +186,14 @@ ul {
 li {
     padding-bottom: .8em;
     font-size: 1vw;
+    margin: 2%;
 }
 
 .price {
     background-color: rgb(246, 157, 177);
     display: inline-block;
     height: 20%;
+    font-size: 1.6vw;
     padding: 5px;
     color: #fff;
 }
