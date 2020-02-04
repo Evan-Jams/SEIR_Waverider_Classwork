@@ -77,11 +77,21 @@ $(() => {
     const $td_2 = $('<td>').text('Charms, Quidditch practice, History of magic');
 
 
+    $container.append($h1, $h2, $h3, $h4, $h4_2, $ul, $h5, $table)
+
+    $h4_2.empty()
+    $li_1.empty()
+    $h4_2.text('Holly Wand WITHOUT a core').css('color','indigo');
+    $h4.remove()
+    $body.prepend($h4)
+
+
+
 
     $tr2.append($td, $td_2)
     $tr.append($th, $th_2)
     $table.append($tr, $tr2)
-    $container.append($h1, $h2, $h3, $h4, $h4_2, $ul, $h5, $table)
+    // $container.append($h1, $h2, $h3, $h4, $h4_2, $ul, $h5, $table)
     $body.append($container);
 
 })
