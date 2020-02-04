@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: blue;
+    height: 100vh;
+    width: 100vw;
+    font-family: verdana;
+    margin: auto;
+}
+
+.info-container {
+    background-color: azure;
+    border: 1 px solid gray;
+    margin-bottom: 5px;
+    padding: 20px;
+
+}
+
+.name, .address {
+    border: 1px solid gray;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.click-me {
+    cursor: pointer;
+}

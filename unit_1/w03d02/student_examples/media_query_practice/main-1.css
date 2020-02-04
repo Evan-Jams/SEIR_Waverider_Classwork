@@ -1,0 +1,27 @@
+* {
+    border: 1px solid black;
+}
+
+body {
+    height: 100vh;
+    margin:  5%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+.letter {
+    background-color: gainsboro;
+    height: 20%;
+    margin: 1%;
+    border-radius: 10px;
+}
+
+#B {
+    flex-grow: 2;
+}
