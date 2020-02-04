@@ -84,6 +84,11 @@ $(() => {
     $h4_2.text('Holly Wand WITHOUT a core').css('color','indigo');
     $h4.remove()
     $body.prepend($h4)
+    $ul.hide('slow').delay(3000).show('slow')
+    // $ul.children('.secret').show('slow')
+    $('.secret').hide('slow')
+    // $('.secret').show('slow')
+//========================== Couldn't get just the secrets to come back but it let me keep them hidden? =======//
 
 
 
