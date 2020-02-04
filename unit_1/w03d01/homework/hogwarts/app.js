@@ -6,7 +6,7 @@
 $(() => {
     const $body = $('body');
     const $container = $('#container');
-    console.log($container);
+    // console.log($container);
 
     const $h1 = $('<h1>')
         .text('Hogwarts');
@@ -64,8 +64,24 @@ $(() => {
 //===========================================================================//
 //===========================================================================//
 
+// Table
+    const $h5 = $('<h5>').text('Spring 2017');
+    const $table = $('<table>');
+    // const $thead = $('<thead>');
+    const $tr = $('<tr>');
+    const $tr2 = $('<tr>');
+    const $th = $('<th>').text('Day')
+    const $th_2 = $('<th>').text('Classes')
 
-    $container.append($h1, $h2, $h3, $h4, $h4_2, $ul)
-    // $body.append();
+    const $td = $('<td>').text('Monday')
+    const $td_2 = $('<td>').text('Charms, Quidditch practice, History of magic');
+
+
+
+    $tr2.append($td, $td_2)
+    $tr.append($th, $th_2)
+    $table.append($tr, $tr2)
+    $container.append($h1, $h2, $h3, $h4, $h4_2, $ul, $h5, $table)
+    $body.append($container);
 
 })

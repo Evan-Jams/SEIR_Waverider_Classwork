@@ -6,3 +6,15 @@ body {
 .cat {
     font-family: fantasy;
 }
+
+.secret {
+    opacity: .5;
+}
+
+li {
+    list-style: none;
+}
+
+table, th, td {
+    border: 1px solid gray;
+}
