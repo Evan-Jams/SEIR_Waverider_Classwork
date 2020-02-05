@@ -2,17 +2,19 @@ console.log('hi');
 
 
 const $container = $('<div>').addClass('container');
-const $div = $('<div>').addClass('red-squares').css('background-color', 'red');
-const $div2 = $('<div>').addClass('black-squares').css('background-color', 'black');
+// const $div = $('<div>').addClass('red-squares').css('background-color', 'red');
+// const $div2 = $('<div>').addClass('black-squares').css('background-color', 'black');
 const $body = $('body')
 const makingSquares = (limit) => {
     for(let i = 0; i < limit; i++) {
         if(i === 0 || i % 2 === 0) {
             console.log(i);
+            const $div = $('<div>').addClass('red-squares').css('background-color', 'red');
             $container.append($div);
 
         } else if(i % 2 !== 0) {
             console.log(i);
+            const $div2 = $('<div>').addClass('black-squares').css('background-color', 'black');
             $container.append($div2);
         }
     }
