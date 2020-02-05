@@ -19,19 +19,25 @@ const cards = [
   'https://www.trustedtarot.com/img/cards/the-moon.png'
 ]
 
+let $img
 
 const $addRandomImage = (list) => {
-    for (let i = 0; i < list.length; i++) {
-        console.log(list[i]);
-
+    const num = Math.floor( Math.random() * cards.length);
+    let $img = $('<img>').attr('src', list[num]);
+    $containerDiv.append($img)
+    $img.on('click', () => {
+        $img.remove();
+    })
     }
-}
 
 
+    const $containerDiv = $('<div>').addClass('container');
 
 $(() => {
-    const $div = $('<button>').text('Add random image').appendTo($('body'))
-
+    $containerDiv.appendTo($('body'))
+    const $div = $('<button>').text('Add random image').appendTo($('body'));
+    $div.on('click', () => { $addRandomImage(cards)});
+    // $img.on('click', () => { $addRandomImage(cards)});
 
 
 
