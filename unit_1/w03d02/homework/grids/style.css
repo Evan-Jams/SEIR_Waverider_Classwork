@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 320px;
+    width: 320px;
+
+}
+
+.red-squares {
+    height: 40px;
+    width: 40px;
+}
+
+.black-squares {
+    height: 40px;
+    width: 40px;
+}
