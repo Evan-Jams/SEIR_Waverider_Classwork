@@ -1,7 +1,12 @@
 const list = []
+const $newToDo = $('<ul>').addClass('to-do')
+const $newToDone = $('<ul>').addClass('to-done')
 
 
 $(() => {
+
+    $('#to-do-list').append($newToDo)
+    $('#completed').append($newToDone)
     $('form').on('submit', (event) => {
         event.preventDefault()
         const inputValue = $('#input-box').val()
@@ -14,12 +19,12 @@ $(() => {
 })
 
 const render = () => {
-    $('ul').empty()
+    $newToDo.empty()
     list.forEach((toDo) => {
         const $li = $('<li>').text(toDo.name).addClass('to-do-item');
-        $('#to-do-list').append($li);
+        $newToDo.append($li);
         $li.on('click', (event) => {
-            $(event.currentTarget).appendTo($('#completed')).removeClass().addClass('done-item')
+            $(event.currentTarget).appendTo($newToDone).removeClass().addClass('done-item')
             const index = $(event.currentTarget).index()
             list[index].declined = true
         })
