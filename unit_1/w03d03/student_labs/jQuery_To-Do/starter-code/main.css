@@ -83,15 +83,32 @@ input:focus {
   flex-direction: column;
   flex-basis: 40%;
   margin: 1em;
+
 }
 
+
 /* style list items, common styles */
-.to-do-item, .done-item {
-  margin: .5em;
-  border-radius: 1em;
-  animation: zoom-in .3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-  box-shadow: 2px 2px 4px gray;
+ul {
+    list-style: none;
 }
+
+.to-do-item, .done-item {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: .5em;
+    border-radius: 1em;
+    animation: zoom-in .3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    box-shadow: 2px 2px 4px gray;
+    height: 100px;
+    width: 330px;
+}
+
+/* button {
+    background-color: rgba(245, 245, 245, .7)
+} */
+
 
 /* Style list item specific to done-item */
 .to-do-item {
