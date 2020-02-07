@@ -3,6 +3,7 @@
 let numberDisplay = []
 
 
+
 $(() => {
     const $buttons = $('.button');
     // Logging the value of the button
