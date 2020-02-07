@@ -1,0 +1,18 @@
+* {
+    border: 1px solid grey;
+}
+
+
+body {
+    background-color: rgba(0, 25, 100, .2)
+}
+
+form {
+    display: flex;
+}
+
+.borough-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
