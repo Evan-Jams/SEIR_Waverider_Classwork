@@ -1,30 +1,20 @@
-// console.log($);
-// console.log('hi');
+// const randomInt = () => {
+//     return Math.floor(Math.random() * data.length)
+// }
 
 
-const randomInt = () => {
-    return Math.floor(Math.random() * data.length)
-}
 
 $(() => {
-    $.ajax({
-        url: 'https://data.cityofnewyork.us/resource/erm2-nwe9.json'
-    }).then((data) => {
-        // I know this isn't even close to being correct. Trying to produce a number of complaints based on the number placed into the input, randomly drawn from the giant database.
-        for (let i = 0; i < $('#input-box.input[input.val()]'); i++) {
-            let i = randomInt()
-            console.log(data[i].complaint_type);
-        }
 
-        // Get the borough info
-        $('#'+ data[i].borough).html();
-        // Get agency info
-        // $('.incidents').html(data[i].agency);
-        // Get complaint type
-        // $('.incidents').html(data[i].complaint_type);
-        // get decription of the complaint
-        // $('.incidents').html(data[i].descriptor)
-        // console.log(data[99]);
+    
+    $.ajax({
+        url: 'https://data.cityofnewyork.us/resource/erm2-nwe9.json?agency=NYPD&borough='
+        // Get information from certain borough, based on a button choice
+    }).then((data) => {
+        // then with the data, get a specific amount of incident reports based on input
+        // w/ default 10 incidents
+        // then post those incidents to the div below the buttons based on which
+        // then on click, display how the incident was handled
 
     },
     () => {
@@ -33,9 +23,5 @@ $(() => {
 )});
 
 
-//===========================================================================//
-// Maybe just exhaustion or something, but I just could not put the pieces together
-// tonight. Basically just stared at my screen for 5 hours last night and a few this morning
-// trying to figure out how to go about getting the information and using it towards a page.
-// Hence why my styling and functionality are severely lacking.
-//===========================================================================//
+
+//
