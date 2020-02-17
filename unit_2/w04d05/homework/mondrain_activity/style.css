@@ -1,42 +1,55 @@
 * {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     box-sizing: border-box;
 }
+
+/* **********************************************/
+/* Body ****************************************/
+/* **********************************************/
 body {
     display: flex;
     height: 80vh;
     width: 80vw;
     margin: auto;
+    border: 5px solid black;
 }
 
+/* **********************************************/
 /* Sidebar on left ******************************/
+/* **********************************************/
 .sidebar-left {
     height: 100%;
     width: 6%;
+
 }
 
 .sidebar-left > .top {
     height: 30%;
     width: 100%;
+    border: 5px solid black;
 }
 
 .sidebar-left > .middle {
     height: 30%;
     width: 100%;
+    border: 5px solid black;
 }
 
 .sidebar-left > .bottom {
     height: 40%;
     width: 100%;
+    border: 5px solid black;
 }
 
-
+/* **********************************************/
 /* Main Container *******************************/
+/* **********************************************/
 .main-container {
     height: 100%;
     width: 85%;
 }
 
+/* top div in main container **************************************************/
 .main-container > .top {
     height: 30%;
     width: 100%;
@@ -44,6 +57,31 @@ body {
     justify-content: space-around;
 }
 
+.main-container > .top > .left {
+    width: 15%;
+    background-color: yellow;
+    border: 5px solid black;
+}
+
+.main-container > .top > .middle-left {
+    width: 33%;
+    background-color: red;
+    border: 5px solid black;
+}
+
+.main-container > .top > .middle-right {
+    width: 39%;
+    background-color: blue;
+    border: 5px solid black;
+}
+
+.main-container > .top > .right {
+    width: 13%;
+    background-color: yellow;
+    border: 5px solid black;
+}
+
+/* middle top div in main container *******************************************/
 .main-container > .middle-top {
     height: 30%;
     width: 100%;
@@ -51,6 +89,34 @@ body {
     justify-content: space-around;
 }
 
+.main-container > .middle-top > .left {
+    width: 15%;
+    border: 5px solid black;
+}
+
+.main-container > .middle-top >  .middle-left {
+    width: 33%;
+    border: 5px solid black;
+}
+
+.main-container > .middle-top >  .middle {
+    width: 13%;
+    border: 5px solid black;
+}
+
+.main-container > .middle-top >  .middle-right {
+    width: 26%;
+    background-color: red;
+    border: 5px solid black;
+}
+
+.main-container > .middle-top >  .right {
+    width: 13%;
+    background-color: blue;
+    border: 5px solid black;
+}
+
+/* middle bottom div in main container ****************************************/
 .main-container > .middle-bottom {
     height: 20%;
     width: 100%;
@@ -58,6 +124,29 @@ body {
     justify-content: space-around;
 }
 
+.main-container > .middle-bottom > .left {
+    width: 15%;
+    border: 5px solid black;
+}
+
+.main-container > .middle-bottom > .middle-left {
+    width: 46%;
+    background-color: blue;
+    border: 5px solid black;
+}
+
+.main-container > .middle-bottom > .middle-right {
+    width: 26%;
+    border: 5px solid black;
+}
+
+.main-container > .middle-bottom > .right {
+    width: 13%;
+    background-color: yellow;
+    border: 5px solid black;
+}
+
+/* bottom div in main container ***********************************************/
 .main-container > .bottom {
     height: 20%;
     width: 100%;
@@ -65,7 +154,26 @@ body {
     justify-content: space-around;
 }
 
+.main-container > .bottom > .left {
+    width: 15%;
+    background-color: red;
+    border: 5px solid black;
+}
+
+.main-container > .bottom > .middle {
+    width: 46%;
+    background-color: yellow;
+    border: 5px solid black;
+}
+
+.main-container > .bottom > .right {
+    width: 39%;
+    border: 5px solid black;
+}
+
+/* **********************************************/
 /* Sidebar on the right *************************/
+/* **********************************************/
 .sidebar-right {
     height: 100%;
     width: 9%;
@@ -74,14 +182,17 @@ body {
 .sidebar-right > .top {
     height: 30%;
     width: 100%;
+    border: 5px solid black;
 }
 
 .sidebar-right > .middle {
     height: 50%;
     width: 100%;
+    border: 5px solid black;
 }
 
 .sidebar-right > .bottom {
     height: 20%;
     width: 100%;
+    border: 5px solid black;
 }
