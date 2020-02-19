@@ -3,8 +3,16 @@ const app = express()
 const PORT = 3000
 
 
+const drinks = require('./models/drinks.js')
+console.log(drinks);
+
+
 app.get('/', (req, res) => {
-    res.send('Welcome to the Gitpub App!')
+    res.send(`Welcome to the Gitpub App! <a href="/drinks">Take a look at our drink selection</a>`)
+})
+
+app.get('/drinks', (req, res) => {
+    res.send(drinks)
 })
 
 
