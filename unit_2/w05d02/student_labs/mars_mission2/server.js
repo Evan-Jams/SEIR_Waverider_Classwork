@@ -29,7 +29,7 @@ const marsMissions = require('./models/marsMissions.js')
 // the view should display just the names of each mission
 // Stretch: the names should provide a link to the show page
 app.get('/mars_mission', (req, res) => {
-    res.render('./views/index.ejs', {
+    res.render('index.ejs', {
         allMissions: marsMissions
     })
 })
@@ -39,11 +39,11 @@ app.get('/mars_mission', (req, res) => {
 // the view should have a link back to the index
 // Stretch: display the image inside an image tag
 
-// app.get('/mars_mission/:actualMissionsThemselves', (req, res) => {
-//     res.render('./missions/show.ejs' {
-//
-//     })
-// })
+app.get('/mars_mission/:actualMissionsThemselves', (req, res) => {
+    res.render('show.ejs' {
+        missions: marsMissions[req.params.actualMissionsThemselves]
+    })
+})
 // LISTENER
 app.listen(PORT, () => {
   console.log('Missions to Mars running on port: ', PORT)

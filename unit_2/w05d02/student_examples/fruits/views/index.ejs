@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>All Fruits</title>
+    </head>
+    <body>
+        <h1>Fruits Index</h1>
+        <ul>
+            <% for (let i = 0; i < allFruits.length; i++) {%>
+                <a href="/fruits/<%=i%>">
+                <li><%= allFruits[i].name %></li>
+                </a>
+            <% }%>
+        </ul>
+
+    </body>
+</html>
