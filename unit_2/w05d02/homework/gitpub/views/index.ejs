@@ -6,10 +6,15 @@
     </head>
     <body>
         <h1>Welcome to gitPub</h1>
+        <ul>
+            <% for (let i = 0; i < allDrinks.length; i++) {%>
+                <li><%= allDrinks[i].name.charAt(0).toUpperCase() + allDrinks[i].name.slice(1) %></li>
+            <%}%>
+        </ul>
 
         <style type="text/css">
             body {
-                
+
             }
 
 
