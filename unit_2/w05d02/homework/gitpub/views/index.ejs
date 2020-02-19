@@ -6,6 +6,7 @@
     </head>
     <body>
         <h1>Welcome to gitPub</h1>
+        <h2>Here's a list of our Drinks!</h2>
         <ul>
             <% for (let i = 0; i < allDrinks.length; i++) {%>
                 <a href="/drinks/<%=i%>">
@@ -16,11 +17,48 @@
             <%}%>
 
         </ul>
+        <h2>Here's a list of our food!</h2>
+        <ul>
+            <% for (let i = 0; i < allFood.length; i++) {%>
+                <a href="/food/<%=i%>">
+                    <li>
+                        <%= allFood[i].name %>
+                    </li>
+                </a>
+            <%}%>
+
+        </ul>
+
 
         <style type="text/css">
             body {
+                text-align: center;
+                background-image: url("https://www.edleysbbq.com/wp-content/uploads/2017/02/woodBG460.jpg");
+                background-color: #987654;
+            }
+
+            h1 {
+                font-size: 10vw;
+                color: white;
+            }
+
+            h2 {
+                font-size: 3vw;
+                color: white;
+            }
+
+            ul {
+                list-style: none;
 
             }
+
+            a {
+                text-decoration: none;
+                color: white;
+                cursor: pointer;
+            }
+
+
 
 
         </style>

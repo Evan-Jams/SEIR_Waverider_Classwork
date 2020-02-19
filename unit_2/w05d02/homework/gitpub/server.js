@@ -4,6 +4,7 @@ const PORT = 3000
 
 
 const drinks = require('./models/drinks.js')
+const food = require('./models/food.js')
 // console.log(drinks);
 
 
@@ -13,7 +14,8 @@ app.get('/', (req, res) => {
 
 app.get('/drinks', (req, res) => {
     res.render('index.ejs', {
-        allDrinks: drinks
+        allDrinks: drinks,
+        allFood: food
     })
 })
 
@@ -24,10 +26,11 @@ app.get('/drinks/:id', (req, res) => {
 })
 
 
-
-
-
-
+app.get('/food/:id', (req, res) => {
+    res.render('show-food.ejs', {
+        aFood: food[req.params.id]
+    })
+})
 
 
 

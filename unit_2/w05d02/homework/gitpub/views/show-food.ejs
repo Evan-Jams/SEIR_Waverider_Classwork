@@ -2,21 +2,23 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Drinks</title>
+        <title>Food</title>
     </head>
     <body>
         <h1>At Foo Bar</h1>
-        <ul>
             <a href="/drinks">Back to Home</a>
+
+        <ul>
             <li>
                 <h2>
-                    <%= drink.name.charAt(0).toUpperCase() + drink.name.slice(1) %>
+                    <%= aFood.name%>
                 </h2>
                 <h3>
-                    Price $<%= drink.price %>
+                    Price $<%= aFood.price %>
                 </h3>
-                <img src="<%=drink.image%>">
+                <img src="<%= aFood.image %>">
             </li>
+
         </ul>
 
 
