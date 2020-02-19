@@ -2,10 +2,33 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Drink Descriptions</title>
+        <title>Drinks</title>
     </head>
     <body>
-        <h1></h1>
+        <h1>At Foo Bar</h1>
+        <ul>
+                <a href="/drinks">Back to Drinks List</a>
+                    <li>
+                        <h2>
+                            <%= drink.name.charAt(0).toUpperCase() + drink.name.slice(1) %>
+                        </h2>
+                        <img src="<%=drink.image%>">
+                        <h3>
+                            Price $<%= drink.price %>
+                        </h3>
 
+                    </li>
+
+
+
+        </ul>
+
+        <style type="text/css">
+            body {
+
+            }
+
+
+        </style>
     </body>
 </html>
