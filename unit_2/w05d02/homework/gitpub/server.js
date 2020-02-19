@@ -4,7 +4,7 @@ const PORT = 3000
 
 
 const drinks = require('./models/drinks.js')
-console.log(drinks);
+// console.log(drinks);
 
 
 app.get('/', (req, res) => {
@@ -12,7 +12,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/drinks', (req, res) => {
-    res.send(drinks)
+    res.render('index.ejs', {
+        allDrinks: drinks
+    })
 })
 
 
