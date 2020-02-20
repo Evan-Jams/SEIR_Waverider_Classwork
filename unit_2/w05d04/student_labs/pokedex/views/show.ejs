@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Pokemon</title>
+    </head>
+    <body>
+        <h1><%=pokeman.name%></h1>
+        <img src="<%=pokeman.img%>" alt="">
+        <ul>
+                <%pokeman.type.forEach((type, index) => {%>
+                    <li><%=pokeman.type[index]%></li>
+                <%})%>
+        </ul>
+        <h2>Stats:</h2>
+        <ul>
+            <li>HP: <%=pokeman.stats.hp%></li>
+            <li>ATTACK: <%=pokeman.stats.attack%></li>
+            <li>DEFENSE: <%=pokeman.stats.defense%></li>
+        </ul>
+
+    </body>
+</html>
