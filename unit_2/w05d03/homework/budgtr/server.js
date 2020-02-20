@@ -12,7 +12,14 @@ app.use(express.static('public'));
 app.get('/budgtr', (req, res) => {
     // res.send('Hey, whats up')
     res.render('index.ejs', {
-        budget: budget
+        budgets: budget
+    })
+})
+
+app.get('/budgtr/:transactionInfo', (req, res) => {
+    const currentTransaction = budget[req.params.transactionInfo]
+    res.render('show.ejs', {
+        budget: currentTransaction
     })
 })
 

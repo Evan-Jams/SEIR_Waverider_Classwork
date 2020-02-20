@@ -14,17 +14,17 @@
                     <tr>
                         <th>Date</th>
                         <th>Name</th>
-                        <th>From</th>
+
                         <th>Amount</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <% budget.forEach((budget, index)=>{ %>
+                    <% budgets.forEach((budgets, index)=>{ %>
                         <tr>
-                            <th><%= budget.date %></th>
-                            <th><a href="/budgtr/<%=index%>"><%= budget.name %></a></th>
-                            <th><%= budget.from %></th>
-                            <th><%= budget.amount %></th>
+                            <th><%= budgets.date %></th>
+                            <th><a href="/budgtr/<%=index%>"><%= budgets.name %></a></th>
+
+                            <th><%= budgets.amount %></th>
                         </tr>
                     <%})%>
                 </tbody>
