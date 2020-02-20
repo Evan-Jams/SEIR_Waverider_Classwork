@@ -2,25 +2,33 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/show.css">
         <title>Pokemon</title>
     </head>
     <body>
         <a href="/pokemon">Back to Home</a>
-        <h1><%=pokeman.name%></h1>
-        <img src="<%=pokeman.img%>" alt="">
-        <h2>Type:</h2>
-        <ul>
-                <%pokeman.type.forEach((type, index) => {%>
-                    <li><%=pokeman.type[index]%></li>
-                <%})%>
-        </ul>
-        <h2>Stats:</h2>
-        <ul>
-            <li>HP: <%=pokeman.stats.hp%></li>
-            <li>ATTACK: <%=pokeman.stats.attack%></li>
-            <li>DEFENSE: <%=pokeman.stats.defense%></li>
-        </ul>
+        <div class="pokemon">
+            <h1><%=pokeman.name%></h1>
+            <!-- <div class="image"> -->
+                <img src="<%=pokeman.img%>" alt="">
+            <!-- </div> -->
+
+            <h2>Type:</h2>
+            <ul>
+                    <%pokeman.type.forEach((type, index) => {%>
+                        <li><%=pokeman.type[index]%></li>
+                    <%})%>
+            </ul>
+            <h2>Stats:</h2>
+            <ul>
+                <li>HP: <%=pokeman.stats.hp%></li>
+                <li>ATTACK: <%=pokeman.stats.attack%></li>
+                <li>DEFENSE: <%=pokeman.stats.defense%></li>
+            </ul>
+            <p>Height: <%=pokeman.misc.height%></p>
+            <p>Weight: <%=pokeman.misc.weight%></p>
+        </div>
+
 
     </body>
 </html>
