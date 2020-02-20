@@ -9,10 +9,10 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.static('public'));
 
 
-app.get('/', (req, res) => {
+app.get('/budgtr', (req, res) => {
     // res.send('Hey, whats up')
     res.render('index.ejs', {
-        
+        budget: budget
     })
 })
 
