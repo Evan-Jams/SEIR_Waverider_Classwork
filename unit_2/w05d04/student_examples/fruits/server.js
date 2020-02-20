@@ -33,9 +33,28 @@ app.get('/fruits/:index', (req, res) => {
   })
 })
 
+// Edit route
+app .get('/fruits/:index/edit', (req, res) => {
+    res.render('edit.ejs', {
+        fruit: fruits[req.params.index],
+        index: req.params.index
+    })
+})
+
 //Delete
 app.delete('/fruits/:index', (req, res) => {
     fruits.splice(req.params.index, 1)
+    res.redirect('/fruits')
+})
+
+// Update
+app.put('/fruits/:index', (req, res) => {
+    if (req.body.readyToEat === 'on') {
+        req.body.readyToEat = true
+    } else {
+        req.body.readyToEat = false
+    }
+    fruits[req.params.index] = req.body
     res.redirect('/fruits')
 })
 
