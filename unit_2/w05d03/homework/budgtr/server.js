@@ -16,6 +16,13 @@ app.get('/budgtr', (req, res) => {
     })
 })
 
+app.post('/budgtr', (req, res) => {
+    const object = {...req.body}
+    console.log(object)
+        budget.push(req.body)
+        res.redirect('/budgtr')
+})
+
 app.get('/budgtr/new', (req, res) => {
     res.render('new.ejs', {
     })

@@ -9,7 +9,7 @@
     <body>
         <div class="container">
             <h1>Add a New Transaction</h1>
-            <form action="/budgtr/" method="post">
+            <form action="/budgtr/" method="POST">
                 <div class="row">
                     <div class="four columns">
                         <input class="u-full-width" type="text" name="date" placeholder="date" id="date">
@@ -26,8 +26,16 @@
                         <input class="u-full-width" type="text" name="from" placeholder="from" id="from">
                     </div>
                 </div>
+                <div class="row">
+                    <div class="eight columns">
+                        <input class="u-full-width" type="text" name="tags" placeholder="additional tags" id="tags">
+                    </div>
+                </div>
+
+
+                <input class="button" type="submit" value="CREATE NEW TRANSACTION">
             </form>
-            <a class="button" href="#">CREATE NEW ITEM</a>
+
         </div>
     </body>
 </html>
