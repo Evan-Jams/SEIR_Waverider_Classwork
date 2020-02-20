@@ -1,11 +1,14 @@
 // Dependencies
 const express = require('express')
+const methodOverride = require('method-override')
 const app = express()
 const PORT = 3000
 
 // middleware
 app.use(express.static('public'))
+// Very important, gives us access to use req.body
 app.use(express.urlencoded({extended: false}))
+app.use(methodOverride('_method'))
 
 // 'Data'
 const fruits = require('./models/fruits.js')
@@ -28,6 +31,12 @@ app.get('/fruits/:index', (req, res) => {
   res.render('show.ejs', {
     fruit: currentFruit
   })
+})
+
+//Delete
+app.delete('/fruits/:index', (req, res) => {
+    fruits.splice(req.params.index, 1)
+    res.redirect('/fruits')
 })
 
 // Create
