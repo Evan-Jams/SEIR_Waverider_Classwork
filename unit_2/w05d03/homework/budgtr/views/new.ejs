@@ -7,6 +7,27 @@
         <title>Budget App</title>
     </head>
     <body>
-
+        <div class="container">
+            <h1>Add a New Transaction</h1>
+            <form action="/budgtr/" method="post">
+                <div class="row">
+                    <div class="four columns">
+                        <input class="u-full-width" type="text" name="date" placeholder="date" id="date">
+                    </div>
+                    <div class="four columns">
+                        <input class="u-full-width" type="text" name="name" placeholder="name" id="name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="four columns">
+                        <input class="u-full-width" type="text" name="amount" placeholder="amount" id="amount">
+                    </div>
+                    <div class="four columns">
+                        <input class="u-full-width" type="text" name="from" placeholder="from" id="from">
+                    </div>
+                </div>
+            </form>
+            <a class="button" href="#">CREATE NEW ITEM</a>
+        </div>
     </body>
 </html>

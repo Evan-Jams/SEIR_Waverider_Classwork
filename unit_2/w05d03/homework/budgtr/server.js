@@ -16,6 +16,11 @@ app.get('/budgtr', (req, res) => {
     })
 })
 
+app.get('/budgtr/new', (req, res) => {
+    res.render('new.ejs', {
+    })
+})
+
 app.get('/budgtr/:transactionInfo', (req, res) => {
     const currentTransaction = budget[req.params.transactionInfo]
     res.render('show.ejs', {
