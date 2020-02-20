@@ -2,21 +2,25 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/main.css">
         <title>Pokemon Pokedex</title>
     </head>
     <body>
         <h1>Pokedex</h1>
-        <ul>
+        <div class="pokemon-container">
             <% pokemon.forEach((pokemon, index) => { %>
-                <li>
+                <div class="pokemon">
                     <a href="/pokemon/<%=index%>">
                         <%=pokemon.name%>
                         <img src="<%=pokemon.img%>" alt="pokemon">
                     </a>
+                    <div class="">
+                        ID <%=pokemon.id%>
+                    </div>
 
-                </li>
+                </div>
             <% }) %>
-        </ul>
+        </div>
 
     </body>
 </html>
