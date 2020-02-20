@@ -9,7 +9,7 @@ const food = require('./models/food.js')
 
 
 app.get('/', (req, res) => {
-    res.send(`Welcome to the Gitpub App! <a href="/drinks">Take a look at our drink selection</a>`)
+    res.send(`Welcome to the Gitpub App! <a href="/drinks">Would you like to see what we have in store? Click HERE!</a>`)
 })
 
 app.get('/drinks', (req, res) => {
