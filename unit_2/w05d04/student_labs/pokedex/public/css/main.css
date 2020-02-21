@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height: 160px;
+    height: 190px;
     width: 150px;
     text-align: center;
     border: 1px solid black;
@@ -34,8 +34,16 @@
     flex-direction: column;
 }
 
+.edit {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
 
-
+a {
+    text-decoration: none;
+    color: black;
+}
 
 img {
     height: 100px;

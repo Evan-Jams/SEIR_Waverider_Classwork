@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/show.css">
+        <title>Pokemon</title>
+    </head>
+    <body>
+        <a href="/pokemon">Back to Home</a>
+        <div class="pokemon">
+
+        <div class="pokemon-update">
+            <h1><%=pokeman.name%></h1>
+            <img src="<%=pokeman.img%>" alt="">
+            <form action="/pokemon/<%=index%>?_method=PUT" method="POST">
+                <fieldset class="new-info">
+                    <legend>TYPE</legend>
+                    <label for="type">Types</label>
+                    <input type="text" id="type" value="<%=pokeman.type%>"/>
+                </fieldset>
+                <fieldset class="new-info">
+                    <legend>STATS</legend>
+                    <label for="hp">HP</label>
+                    <input type="text" id="hp" value="<%=pokeman.stats.hp%>"/>
+                    <label for="attack">ATTACK</label>
+                    <input type="text" id="attack" value="<%=pokeman.stats.attack%>"/>
+                    <label for="defense">DEFENSE</label>
+                    <input type="text" id="defense" value="<%=pokeman.stats.defense%>"/>
+                </fieldset>
+                <fieldset class="new-info">
+                    <legend>MEASUREMENTS</legend>
+                    <label for="height">HEIGHT</label>
+                    <input type="text" id="height" value="<%=pokeman.misc.height%>"/>
+                    <label for="weight">WEIGHT</label>
+                    <input type="text" id="weight" value="<%=pokeman.misc.weight%>"/>
+                </fieldset>
+                <input type="submit" value="SAVE">
+            </form>
+        </div>
+    </body>
+</html>

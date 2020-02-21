@@ -28,12 +28,37 @@ app.get('/pokemon/:id', (req, res) => {
     })
 })
 
+// Create
+app.post('/pokemon', (req, res) => {
+  pokemon.push(req.body)
+  res.redirect('/pokemon')
+})
+
 // Edit
-app .get('/pokemon/:index/edit', (req, res) => {
+app.get('/pokemon/:index/edit', (req, res) => {
     res.render('edit.ejs', {
         pokeman: pokemon[req.params.index],
         index: req.params.index
     })
+})
+
+// Update
+app.put('/pokemon/:index', (req, res) => {
+    let object = {...req.body}
+    object.img = pokemon[req.params.index].img
+    object.type = [object.type]
+    object.stats = {
+        hp: object.hp,
+        attack: object.attack,
+        defense: object.defense,
+    }
+    delete object.hp, object.attack, object.defense
+    object.misc = {
+        height: object.height,
+        weight: object.weight,
+    }
+    pokemon[req.params.index] = object
+    res.redirect('/pokemon')
 })
 
 //Delete
@@ -42,17 +67,11 @@ app.delete('/pokemon/:index', (req, res) => {
     res.redirect('/pokemon')
 })
 
-// Update
-app.put('/pokemon/:index', (req, res) => {
-    pokemon[req.params.index] = req.body
-    res.redirect('/pokemon')
-})
 
-// Create
-app.post('/pokemon', (req, res) => {
-  pokemon.push(req.body)
-  res.redirect('/pokemon')
-})
+
+
+
+
 
 
 
