@@ -1,9 +1,5 @@
 // create 5 burgers (at least 3 should be beef)
-db.burger.insert({
-... meat: 'beef',
-... cheese: false,
-... toppings: ['ketchup', 'onions', 'pickles']
-... })
+db.burger.insert({ meat: 'beef', cheese: false, toppings: ['ketchup', 'onions', 'pickles']})
 
 db.burger.insert({ meat: 'beef', cheese: true, toppings: ['ketchup', 'mayo', 'pickles', 'lettuce']})
 
@@ -41,31 +37,29 @@ db.burger.find({meat: {$ne: 'beef'}}).pretty()
 db.burger.findOne({cheese: true}, {justOne: true})
 
 // find one and update the first burger with cheese to have a property of 'double cheese'
-db.burger.findOne({cheese: true}, {justOne: true})
-//took id from this one
-db.burger.update({_id: ObjectId("5e5054d824a10d7523715b49")}, {$set: {cheese: 'double cheese'}})
+db.burger.findOneAndUpdate({cheese: true}, {$set:{cheese: 'double cheese'}})
 
 // find the burger you updated to have double cheese
 db.burger.find({cheese: 'double cheese'}).pretty()
 
 // find and update all the beef burgers to be 'veggie'
-
+db.burger.updateMany({meat: 'beef'}, {$set: {meat: 'veggie'}})
 
 // delete one of your veggie burgers
 // WRONG - dELETES ALL : db.burger.remove({meat: 'veggie'})
-
+db.burger.remove({meat: 'veggie'}, {justOne: true})
 
 // drop the collection
 //Expected Output
 //true
-
+db.burger.drop()
 // drop the database
 //Expected Output
 // {
 //   "dropped": "burgers",
 //   "ok": 1
 // }
-
+db.dropDatabase()
 
 //
 // Bonus
