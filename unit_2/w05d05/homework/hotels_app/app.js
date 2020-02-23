@@ -1,5 +1,6 @@
 // dependencies
 const mongoose = require('mongoose')
+// mongoose.Promise = global.Promise
 const db = mongoose.connection
 
 const mongoURI = 'mongodb:localhost:27017/hotel'
@@ -12,12 +13,13 @@ mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
-}, () => {
-    console.log('Yo, you are connected homie');
+    },
+    () => {
+        console.log('Yo, you are connected homie');
 })
 
-// error / success
-db.on('error', (err) =>
+// error & success
+db.on('error', err =>
     console.log(err.message + ' mongo is not running')
 )
 db.on('connected', () =>

@@ -8,7 +8,7 @@ const hotelSchema = new Schema (
             required: true,
             unique: true
         },
-        location: true,
+        location: String,
         rating: {
             type: Number,
             maxValue: 5
@@ -24,7 +24,7 @@ const hotelSchema = new Schema (
             booked: Boolean
         }]
     },
-    {timestamps: true}
+    { timestamps: true }
 )
 
 const Hotel = mongoose.model('Hotel', hotelSchema)
