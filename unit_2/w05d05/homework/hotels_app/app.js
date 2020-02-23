@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 // mongoose.Promise = global.Promise
 const db = mongoose.connection
 
-const mongoURI = 'mongodb:localhost:27017/hotel'
+const mongoURI = 'mongodb://localhost:27017/hotel'
 
 const Hotel = require('./models/hotel.js')
 const hotelSeed = require('./models/seed.js')
@@ -28,6 +28,10 @@ db.on('connected', () =>
 db.on('disconnected', () =>
     console.log('mongo disconnected')
 )
+
+setTimeout(() => {
+    db.close()
+}, 3000)
 
 // Hotel.create(hotelSeed, (err, data) => {
 //   if (err) console.log(err.message)
