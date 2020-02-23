@@ -34,7 +34,7 @@ app.get('/fruits/:index', (req, res) => {
 })
 
 // Edit route
-app .get('/fruits/:index/edit', (req, res) => {
+app.get('/fruits/:index/edit', (req, res) => {
     res.render('edit.ejs', {
         fruit: fruits[req.params.index],
         index: req.params.index

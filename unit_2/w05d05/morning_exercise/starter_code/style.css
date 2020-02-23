@@ -3,3 +3,44 @@
   /*margin: 0;*/
   /*padding: 0;*/
 }
+
+section {
+    display: flex;
+    padding: 3%;
+    border-bottom: 1px solid gainsboro;
+
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+    padding: 3%;
+}
+
+img {
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px grey;
+}
+
+nav {
+    text-align: left;
+    width: 30%;
+}
+
+nav > ul {
+    list-style: none;
+    padding: 0;
+}
+
+main {
+    width: 60%;
+    padding: 3%;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    box-shadow: -3px 3px 3px grey;
+    margin-top: 25%;
+}
