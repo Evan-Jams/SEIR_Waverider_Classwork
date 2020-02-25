@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
+const Product = require('./models/products.js')
 const app = express()
 const PORT = 3000
 
@@ -22,7 +23,14 @@ mongoose.connection.once('open', () => {
 // Presentaional Routes
 // Index
 app.get('/mongoose_store', (req, res) => {
-    res.send('Index page')
+    Product.find({}, (error, allProducts) => {
+        if (error) {
+            res.send('You done messed up bro')
+        }
+        console.log(allProducts);
+        // res.send(allProducts)
+    })
+
 })
 
 

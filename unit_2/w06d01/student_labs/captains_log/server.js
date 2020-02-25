@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const app = express()
+const Logs = require('./models/logs.js')
 const PORT = 3000
 
 // Middleware
@@ -21,7 +22,14 @@ mongoose.connection.on('open', () => {
 // Presentation Routes
 // Index
 app.get('/logs', (req, res) => {
-    res.send('Index Page')
+    Logs.find({}, (err, allLogs) => {
+        if(err){
+            res.send('You done messed up bro')
+        }
+        res.render('index.ejs', {
+            logs: allLogs
+        })
+    })
 })
 // Show
 
@@ -29,7 +37,19 @@ app.get('/logs', (req, res) => {
 app.get('/logs/new',(req, res) => {
     res.render('new.ejs')
 })
+
 // Create
+app.post('/logs', (req, res) => {
+    if (req.body.shipIsBroken === 'on') {
+        req.body.shipIsBroken = true;
+    } else {
+        req.body.shipIsBroken = false;
+    }
+    console.log(req.body);
+    Logs.create(req.body, (err, newLog) => {
+        res.redirect('/logs')
+    })
+})
 
 // Edit
 

@@ -1,11 +1,11 @@
 {
-  "name": "homework",
+  "name": "mongoose_store",
   "version": "1.0.0",
   "description": "[![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",

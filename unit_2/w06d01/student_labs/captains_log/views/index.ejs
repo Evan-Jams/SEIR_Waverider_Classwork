@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Captains Log</title>
+    </head>
+    <body>
+        <h1>Captain's Log</h1>
+        <nav>
+            <a href="/logs/new">Create a New Log</a>
+        </nav>
+        <ul>
+            <% for(let i = 0; i < logs.length; i++){ %>
+                <li>
+                    <a href="/logs/<%=logs[i].id;%>">
+                    <%=logs[i].title; %>
+                    </a>
+                    <%=logs[i].entry; %>.
+                    <% if(logs[i].shipIsBroken === true){ %>
+                        It is not ready to sail
+                    <% } else { %>
+                        It is ready to sail
+                    <% } %>
+                    <form class="" action="/logs/<%=logs[i].id;%>?_method=DELETE" method="post">
+                        <input type="submit" name="" value="DELETE">
+                    </form>
+                </li>
+            <% } %>
+        </ul>
+    </body>
+</html>
