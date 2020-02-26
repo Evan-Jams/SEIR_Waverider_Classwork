@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <%- include ('./partials/head.ejs') %>
+    </head>
+    <body>
+        <header>
+            <%- include ('./partials/header.ejs') %>
+        </header>
+        <form class="" action="/products" method="post">
+            <input type="text" name="name" placeholder="Name Your Board">
+            <input type="text" name="description" placeholder="Describe Your Board">
+            <input type="text" name="price" placeholder="How much does your board cost?">
+            <input type="text" name="qty" placeholder="How many boards are you looking to stock?">
+            <input type="submit" name="" value="Create">
+        </form>
+
+    </body>
+</html>

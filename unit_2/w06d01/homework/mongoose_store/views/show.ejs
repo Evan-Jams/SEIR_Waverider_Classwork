@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <%- include ('./partials/head.ejs') %>
+    </head>
+    <body>
+        <header>
+            <%- include ('./partials/header.ejs') %>
+        </header>
+        <div class="show-container">
+            <img src="<%=product.img%>" alt="skateboard">
+            <p>BAKER SKATEBOARDS</p>
+            <div class="product-show-info">
+                <span><%=product.description%></span>
+                <p>$ <%=product.price%></p>
+            </div>
+            <p>Includes 1 sheet of black grip tape</p>
+            <a href="#">Buy Now</a>
+
+        </div>
+
+    </body>
+</html>
