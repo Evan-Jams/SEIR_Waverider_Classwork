@@ -25,6 +25,10 @@ header > img {
     width: 300px;
 }
 
+h1 {
+    margin: auto;
+}
+
 img {
     width: 100%;
     box-shadow: 3px 3px 3px gray;
