@@ -46,11 +46,36 @@ router.post('/', (req, res) => {
 })
 
 // Edit
-
+router.get('/:id/edit', (req, res) => {
+  Logs.findById(req.params.id, (error, foundLog) => {
+    res.render('edit.ejs', {
+      log: foundLog
+    })
+  })
+})
 // Update
+router.put('/:id', (req, res) => {
+  if (req.body.shipIsBroken === 'on') {
+    req.body.shipIsBroken = true
+  } else {
+    req.body.shipIsBroken = false
+  }
+  Logs.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (error, updatedModel) => {
+      res.redirect('/logs')
+    }
+  )
+})
 
 // Delete
-
+router.delete('/:id', (req, res) => {
+  Logs.findByIdAndRemove(req.params.id, (err, deletedLog) => {
+    res.redirect('/logs')
+  })
+})
 
 
 module.exports = router
