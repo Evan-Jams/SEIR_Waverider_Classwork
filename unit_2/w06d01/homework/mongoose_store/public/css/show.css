@@ -1,0 +1,65 @@
+* {
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 150px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 3%;
+    padding: 5px;
+    box-shadow: 0 5px 2px -2px gainsboro;
+}
+header > img {
+    height: 100px;
+    width: 300px;
+}
+
+img {
+    width: 700px;
+}
+
+#baker-skateboards {
+    font-size: 25px;
+}
+
+.quantity {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100px;
+    border: 1px solid black;
+    margin: 10px auto;
+    align-items: center;
+}
+
+#buy-amount {
+    width: 50%;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+#minus, #plus {
+    margin: auto;
+    background: gainsboro;
+    width: 25%;
+    cursor: pointer;
+}
+
+.products {
+    width: 40%;
+}
+
+.edit {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+
+}

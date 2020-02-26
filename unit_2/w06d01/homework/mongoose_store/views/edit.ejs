@@ -2,8 +2,28 @@
 <html lang="en" dir="ltr">
     <head>
         <%- include ('./partials/head.ejs') %>
+        <link rel="stylesheet" href="/css/show.css">
     </head>
     <body>
-
+        <form class="edit" action="/products/<%=product.id%>?_method=PUT" method="post">
+            <img src="<%=product.img%>" alt="skateboard">
+            <label for="image">Paste New Image URL</label>
+            <input type="text" name="image" value="<%=product.img%>">
+            <br>
+            <label for="name">Name</label>
+            <input type="text" name="name" value="<%=product.name%>">
+            <br>
+            <label for="description">Description</label>
+            <input type="text" name="description" value="<%=product.description%>">
+            <br>
+            <label for="price">Price</label>
+            <input type="text" name="price" value="<%=product.price%>">
+            <br>
+            <label for="qty">Boards in Stock</label>
+            <input type="text" name="qty" value="<%=product.qty%>">
+            <br>
+            <input type="submit" name="" value="Save Edit">
+        </form>
+        <script src="/js/app.js" charset="utf-8"></script>
     </body>
 </html>

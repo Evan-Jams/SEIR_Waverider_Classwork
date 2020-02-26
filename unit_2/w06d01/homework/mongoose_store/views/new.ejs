@@ -6,14 +6,16 @@
     <body>
         <header>
             <%- include ('./partials/header.ejs') %>
+            <link rel="stylesheet" href="/css/show.css">
         </header>
         <form class="" action="/products" method="post">
+            <input type="text" name="img" placeholder="Paste image link of your board">
             <input type="text" name="name" placeholder="Name Your Board">
             <input type="text" name="description" placeholder="Describe Your Board">
             <input type="text" name="price" placeholder="How much does your board cost?">
             <input type="text" name="qty" placeholder="How many boards are you looking to stock?">
             <input type="submit" name="" value="Create">
         </form>
-
+        <script src="/js/app.js" charset="utf-8"></script>
     </body>
 </html>

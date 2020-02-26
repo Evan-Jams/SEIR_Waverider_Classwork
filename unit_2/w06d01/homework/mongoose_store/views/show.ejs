@@ -2,22 +2,43 @@
 <html lang="en" dir="ltr">
     <head>
         <%- include ('./partials/head.ejs') %>
+        <link rel="stylesheet" href="/css/show.css">
     </head>
     <body>
         <header>
             <%- include ('./partials/header.ejs') %>
         </header>
+        <a href="/products">Back to Home</a>
         <div class="show-container">
             <img src="<%=product.img%>" alt="skateboard">
-            <p>BAKER SKATEBOARDS</p>
+            <div id="baker-skateboards">BAKER SKATEBOARDS</div>
             <div class="product-show-info">
                 <span><%=product.description%></span>
                 <p>$ <%=product.price%></p>
             </div>
             <p>Includes 1 sheet of black grip tape</p>
-            <a href="#">Buy Now</a>
+            <p>Left In Stock: <%=product.qty%></p>
+            <div class="quantity">
+                <div id="minus">
+                    -
+                </div>
+                <div id="buy-amount">
+
+                </div>
+                <div id="plus">
+                    +
+                </div>
+
+            </div>
+            <form class="buy-button" action="/products/<%=product.id;%>?_method=PUT" method="post">
+                    <input type="submit" name="buy" value="BUY NOW">
+            </form>
+            <form class="delete-button" action="/products/<%=product.id;%>?_method=DELETE" method="post">
+                    <input type="submit" name="" value="DELETE">
+            </form>
+            <a href="/products/<%=product.id%>/edit">Edit this Board</a>
 
         </div>
-
+        <script src="/js/app.js" charset="utf-8"></script>
     </body>
 </html>

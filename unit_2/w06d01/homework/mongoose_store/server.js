@@ -15,7 +15,8 @@ app.use('/products', productsController);
 
 mongoose.connect('mongodb://localhost:27017/mongoose_store', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: true
 });
 
 mongoose.connection.once('open', () => {

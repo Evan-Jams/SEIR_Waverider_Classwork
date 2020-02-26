@@ -2,6 +2,7 @@ const router = require('express').Router();
 const Product = require('../models/products.js')
 const Seed = require('../models/seed.js')
 
+
 // Presentaional Routes
 // Index
 router.get('/', (req, res) => {
@@ -60,7 +61,8 @@ router.post('/', (req, res) => {
 router.get('/:id/edit', (req, res) => {
     Product.findById(req.params.id, (err, foundProduct) => {
         res.render('edit.ejs', {
-            product: foundProduct
+            product: foundProduct,
+            tabTitle: 'Edit Skateboard'
         });
     });
 });
@@ -71,7 +73,7 @@ router.put('/:id', (req, res) => {
         if(err) {
             res.send(err);
         }
-        res.redirect('/products')
+        res.redirect(`/products/${updatedProduct.id}`)
     });
 });
 

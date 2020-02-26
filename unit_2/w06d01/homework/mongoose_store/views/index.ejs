@@ -8,20 +8,25 @@
             <%- include ('./partials/header.ejs') %>
         </header>
         <a href="/products/new">Create Your Own Skateboard</a>
-        <% for (let i = 0; i < products.length; i++) {%>
-            <div class="products">
-                <a href="/products/<%=products[i].id%>">
-                    <img src="<%=products[i].img%>" alt="skateboard">
-                    <div class="product-info">
-                        <span><%=products[i].description%></span>
+        <div class="container">
+            <% for (let i = 0; i < products.length; i++) {%>
+                <div class="products">
+                    <a href="/products/<%=products[i].id%>">
+                        <img src="<%=products[i].img%>" alt="skateboard">
+                        <div class="product-info">
+                            <span><%=products[i].description%></span>
 
+                        </div>
+                    </a>
+                    <div>
+                        <%=products[i].price%>
                     </div>
-                </a>
-                <div>
-                    <%=products[i].price%>
-                </div>
-            </div>
 
-        <%}%>
+                </div>
+
+            <%}%>
+        </div>
+
+        <script src="/js/app.js" charset="utf-8"></script>
     </body>
 </html>
