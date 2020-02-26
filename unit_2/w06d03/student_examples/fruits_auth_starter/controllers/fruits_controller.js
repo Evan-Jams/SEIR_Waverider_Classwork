@@ -6,7 +6,7 @@ const fruits = express.Router()
 fruits.get('/new', (req, res) => {
   res.render(
     'fruits/new.ejs'
-    // , {currentUser: req.session.currentUser}
+    , {currentUser: req.session.currentUser}
   )
 })
 
@@ -15,7 +15,7 @@ fruits.get('/:id/edit', (req, res) => {
   Fruit.findById(req.params.id, (error, foundFruit) => {
     res.render('fruits/edit.ejs', {
       fruit: foundFruit
-      // ,currentUser: req.session.currentUser
+      ,currentUser: req.session.currentUser
     })
   })
 })
@@ -32,7 +32,7 @@ fruits.get('/:id', (req, res) => {
   Fruit.findById(req.params.id, (error, foundFruit) => {
     res.render('fruits/show.ejs', {
       fruit: foundFruit
-      // ,  currentUser: req.session.currentUser
+      ,  currentUser: req.session.currentUser
     })
   })
 })
@@ -71,7 +71,7 @@ fruits.get('/', (req, res) => {
   Fruit.find({}, (error, allFruits) => {
     res.render('fruits/index.ejs', {
       fruits: allFruits
-      // ,currentUser: req.session.currentUser
+      ,currentUser: req.session.currentUser
     })
   })
 })
