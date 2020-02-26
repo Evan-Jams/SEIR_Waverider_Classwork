@@ -1,10 +1,12 @@
 * {
     /* border: 1px solid black; */
     box-sizing: border-box;
+    font-family: 'Permanent Marker', 'sans serif' ;
 }
 
 body {
     text-align: center;
+
 }
 
 header {
@@ -16,6 +18,7 @@ header {
     margin-bottom: 3%;
     padding: 5px;
     box-shadow: 0 5px 2px -2px gainsboro;
+    background: white;
 }
 header > img {
     height: 100px;
@@ -24,6 +27,22 @@ header > img {
 
 img {
     width: 100%;
+    box-shadow: 3px 3px 3px gray;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.create-board {
+    width: 50%;
+    margin: auto;
+    box-shadow: 3px 3px 3px gray;
+    background: rgb(239, 239, 239);
+}
+.create-board:active {
+    box-shadow: none;
 }
 
 .container {
@@ -31,8 +50,10 @@ img {
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
+
 }
 
 .products {
     width: 40%;
+    margin: 20px;
 }

@@ -7,7 +7,10 @@
         <header>
             <%- include ('./partials/header.ejs') %>
         </header>
-        <a href="/products/new">Create Your Own Skateboard</a>
+        <div class="create-board">
+            <a href="/products/new">Create Your Own Skateboard</a>
+        </div>
+
         <div class="container">
             <% for (let i = 0; i < products.length; i++) {%>
                 <div class="products">
@@ -19,7 +22,7 @@
                         </div>
                     </a>
                     <div>
-                        <%=products[i].price%>
+                        $ <%=products[i].price%>
                     </div>
 
                 </div>
