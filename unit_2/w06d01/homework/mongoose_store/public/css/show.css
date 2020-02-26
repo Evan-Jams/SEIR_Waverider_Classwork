@@ -23,6 +23,19 @@ header > img {
     width: 300px;
 }
 
+.form, label {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px;
+    align-items: center;
+}
+
+input {
+    margin: 10px;
+    width: 250px;
+}
+
 img {
     width: 700px;
 }
@@ -63,4 +76,9 @@ img {
     justify-content: center;
     flex-direction: column;
 
+}
+
+.image-placeholder > img {
+    width: 600px;
+    border: 1px solid gainsboro;
 }

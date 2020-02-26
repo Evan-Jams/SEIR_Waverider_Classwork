@@ -2,20 +2,37 @@
 <html lang="en" dir="ltr">
     <head>
         <%- include ('./partials/head.ejs') %>
+        <link rel="stylesheet" href="/css/show.css">
     </head>
     <body>
         <header>
             <%- include ('./partials/header.ejs') %>
             <link rel="stylesheet" href="/css/show.css">
         </header>
-        <form class="" action="/products" method="post">
-            <input type="text" name="img" placeholder="Paste image link of your board">
-            <input type="text" name="name" placeholder="Name Your Board">
-            <input type="text" name="description" placeholder="Describe Your Board">
-            <input type="text" name="price" placeholder="How much does your board cost?">
-            <input type="text" name="qty" placeholder="How many boards are you looking to stock?">
-            <input type="submit" name="" value="Create">
-        </form>
+        <div class="container">
+            <form class="form" action="/products" method="post">
+                <div class="image-placeholder">
+                    <img src="https://www.stringhetto.com/wp-content/uploads/woocommerce-placeholder-470x470.png" alt="">
+                </div>
+                <label for="img">Image Link</label>
+                <input type="text" name="img" placeholder="Paste image link of your board">
+
+                <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Name Your Board">
+
+                <label for="description">Description</label>
+                <input type="text" name="description" placeholder="Describe Your Board">
+
+                <label for="price">Price</label>
+                <input type="text" name="price" placeholder="How much does your board cost?">
+
+                <label for="qty">Boards in Stock</label>
+                <input type="text" name="qty" placeholder="How many boards are you looking to stock?">
+
+                <input type="submit" name="" value="Create">
+            </form>
+        </div>
+
         <script src="/js/app.js" charset="utf-8"></script>
     </body>
 </html>
