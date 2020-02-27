@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <%- include ('../partials/head.ejs') %>
+    </head>
+    <body>
+        <nav>
+            <%- include ('../partials/nav.ejs') %>
+        </nav>
+        <blockquote>
+                <h1><%=log.title%></h1>
+                <%=log.entry %>.
+            <br>
+                <% if(log.shipIsBroken === true){ %>
+                    It is not ready to sail
+                <% } else { %>
+                    It is ready to sail
+                <% } %>
+            <br>
+            <a href="/logs/<%=log._id%>/edit">Edit Log</a>
+        </blockquote>
+    </body>
+</html>
