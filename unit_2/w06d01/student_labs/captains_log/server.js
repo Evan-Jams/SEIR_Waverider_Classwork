@@ -12,6 +12,7 @@ const mongodbURI = process.env.MONGODBURI
 
 // Middleware
 app.use(express.urlencoded({extended: true}))
+app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(session({
     secret: process.env.SECRET,

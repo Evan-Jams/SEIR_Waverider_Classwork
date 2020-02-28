@@ -1,0 +1,37 @@
+* {
+    /* border: 1px solid black; */
+}
+
+body {
+    margin: 0 20px;
+}
+
+.brand-logo {
+    margin-left: 20px;
+}
+
+a {
+    font-size: 20px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 1px solid gainsboro;
+    border-top: none;
+    box-shadow: 3px 3px 3px gainsboro;
+    padding: 0 10px;
+}
+
+.right > li {
+    border: none;
+    box-shadow: none;
+    margin: 0 5px;
+}
+
+span {
+    font-size: 18px;
+    font-weight: 450;
+    margin-right: 10px;
+}

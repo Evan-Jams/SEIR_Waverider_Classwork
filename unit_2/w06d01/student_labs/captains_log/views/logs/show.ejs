@@ -9,12 +9,12 @@
         </nav>
         <blockquote>
                 <h1><%=log.title%></h1>
-                <%=log.entry %>.
+                <span>ENTRY: </span><%=log.entry %>.
             <br>
                 <% if(log.shipIsBroken === true){ %>
-                    It is not ready to sail
+                    <span>SHIP STATUS: </span>It is not ready to sail
                 <% } else { %>
-                    It is ready to sail
+                    <span>SHIP STATUS: </span>It is ready to sail
                 <% } %>
             <br>
             <a href="/logs/<%=log._id%>/edit">Edit Log</a>
