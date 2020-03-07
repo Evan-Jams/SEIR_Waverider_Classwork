@@ -92,19 +92,33 @@ const emptyObj = {rAndR, healing, weapon, music, style}
 
 let args = ['super', 99, 'cali', {toy: 'kite'}, 'fragil', 'istic', false, 'expiali', 'do', [8,6,7,5,3,0,9], 'cious']
 
+const sortStrings = (...input) => {
+    let newString = input.sort().join('')
+    // console.log(newString);
+}
+
+
+sortStrings(args[0], args[2], args[4], args[5], args[7], args[8], args[10])
+
 // Use the two given arrays to solve the following problems using the short arrow function syntax.
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0]
 
 const panagram = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']
 
 // Use the Filter method to filter the nums array for numbers less than 4.
+const lowNums = nums.filter(num => num < 4).sort()
+console.log(lowNums);
 
 // Use the Filter method to filter words that have an even length.
+const evenWords = panagram.filter(word => word.length % 2 === 0)
+console.log(evenWords);
 
 // Use the For Each method to log each value in the nums array by 3.
+nums.forEach(num => console.log(num * 3));
+
 
 // Use the For Each method to log each word with an exclamation point at end of the word.
-
+panagram.forEach( word => console.log(word + '!'));
 
 //=============== HUNGRY FOR MORE ===============//
 
