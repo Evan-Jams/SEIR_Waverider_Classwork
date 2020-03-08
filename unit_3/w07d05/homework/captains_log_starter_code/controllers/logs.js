@@ -42,7 +42,7 @@ logs.post('/',(req, res) => {
 
 //Delete Route
 logs.delete('/:id',(req, res) => {
-  Log.findOneAndDelete({_id:req.params.id}, (err, deltedLog) => {
+  Log.findByIdAndRemove(req.params.id, (err, deletedLog) => {
     res.redirect('/logs')
   });
 });
