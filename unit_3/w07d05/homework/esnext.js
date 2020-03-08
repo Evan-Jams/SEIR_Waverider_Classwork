@@ -107,18 +107,20 @@ const panagram = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy'
 
 // Use the Filter method to filter the nums array for numbers less than 4.
 const lowNums = nums.filter(num => num < 4).sort()
-console.log(lowNums);
+// console.log(lowNums);
 
 // Use the Filter method to filter words that have an even length.
 const evenWords = panagram.filter(word => word.length % 2 === 0)
-console.log(evenWords);
+// console.log(evenWords);
 
 // Use the For Each method to log each value in the nums array by 3.
-nums.forEach(num => console.log(num * 3));
+
+// nums.forEach(num => console.log(num * 3));
 
 
 // Use the For Each method to log each word with an exclamation point at end of the word.
-panagram.forEach( word => console.log(word + '!'));
+
+// panagram.forEach( word => console.log(word + '!'));
 
 //=============== HUNGRY FOR MORE ===============//
 
