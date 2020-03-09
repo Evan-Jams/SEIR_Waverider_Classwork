@@ -8,7 +8,6 @@ class Receipt extends Component {
             <div>
             <ul>
                 <li>
-                {this.state.person}
                 </li>
             </ul>
             </div>
