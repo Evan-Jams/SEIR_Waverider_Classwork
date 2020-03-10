@@ -6,13 +6,15 @@ class BirdCollection extends Component {
         return (
             <div>
                 Bird Collection
-                {
-                    this.props.birds.map((bird, i) => {
-                        return (
-                            <Birds bird={bird} key={ i } />
-                        )
-                    })
-                }
+                <ul>
+                    {
+                        this.props.birds.map((bird, i) => {
+                            return (
+                                <Birds bird={bird} key={ i } />
+                            )
+                        })
+                    }
+                </ul>
             </div>
         )
     }

@@ -6,7 +6,7 @@ class Birds extends Component {
         return(
             <div>
                 <p>{this.props.bird.birdName}</p>
-                <img src={this.props.bird.image} />
+                <img src={this.props.bird.image} alt={this.props.bird.birdName}/>
                 <p>{this.props.bird.approved}</p>
             </div>
 
