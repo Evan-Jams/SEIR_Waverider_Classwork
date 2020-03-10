@@ -48,38 +48,38 @@ class App extends Component {
     }
     render() {
         return (
-            <div>
-            <h1>Grocery List</h1>
-            <form onSubmit={this.handleSubmit}>
-                <label htmlFor="item"> Item: </label>
-                    <input type="text" value={this.state.item} onChange={this.handleChange} id="item"/>
-                    <br />
-                <label htmlFor="brand"> Brand: </label>
-                    <input type="text" value={this.state.brand} onChange={this.handleChange} id="brand"/>
-                    <br />
-                <label htmlFor="units"> Units: </label>
-                    <input type="text" value={this.state.units} onChange={this.handleChange} id="units"/>
-                    <br />
-                <label htmlFor="quantity"> Quantity: </label>
-                    <input type="number" value={this.state.quantity} onChange={this.handleChange} id="quantity"/>
-                    <br />
-                <label htmlFor="isPurchased"> Purchased ?: </label>
-                    <input type="checkbox" onChange={this.toggleCheckbox} defaultChecked={this.state.isPurchased} id="isPurchased"/>
-                    <br />
-                <input type="submit" />
-            </form>
+            <div className="main-container">
+                <h1>Grocery List</h1>
+                <form onSubmit={this.handleSubmit}>
+                    <div className="form-top" >
+                        <label htmlFor="item"> Item: </label>
+                            <input type="text" value={this.state.item} onChange={this.handleChange} id="item"/>
+                        <label htmlFor="brand"> Brand: </label>
+                            <input type="text" value={this.state.brand} onChange={this.handleChange} id="brand"/>
+                    </div>
+                        <br />
+                    <div className="form-bottom" >
+                        <label htmlFor="units"> Units: </label>
+                            <input type="text" value={this.state.units} onChange={this.handleChange} id="units"/>
+                        <label htmlFor="quantity"> Quantity: </label>
+                            <input type="number" value={this.state.quantity} onChange={this.handleChange} id="quantity"/>
+                    </div>
+                        <br />
+                    <div id="purchased">
+                        <label htmlFor="isPurchased"> Purchased: </label>
+                            <input type="checkbox" onChange={this.toggleCheckbox} defaultChecked={this.state.isPurchased} id="isPurchased"/>
+                    </div>
+                        <br />
+                    <input type="submit" />
+                </form>
                 <ul>
                     {this.state.groceryItems.map((item, i) =>
                         <li key={ i }>
-                            <h2>Item: {item.item}</h2>
-                            <h4>Brand: {item.brand}</h4>
-                            <h4>Units: {item.units}</h4>
-                            <h4>Purchased ?: {
-                                    item.isPurchased
-                                    ? 'true'
-                                    : 'false'
-                                }
-                            </h4>
+                            <h2>{item.item}</h2>
+                            <h4><span>Brand:</span> {item.brand}</h4>
+                            <h4><span>Units:</span> {item.units}</h4>
+                            <h4><span>Quantity:</span> {item.quantity}</h4>
+                            <button type="button" value="purchase">Purchase</button>
                         </li>
                     )}
                 </ul>
