@@ -36,8 +36,8 @@ li {
     padding: 5px;
     border: 1px solid gainsboro;
     margin-bottom: 15px;
-    box-shadow: 2px 2px 1px gainsboro,
-                -2px 2px 1px gainsboro;
+    box-shadow: 2px 2px 7px gainsboro,
+                -2px 2px 7px gainsboro;
 }
 
 h1 {
