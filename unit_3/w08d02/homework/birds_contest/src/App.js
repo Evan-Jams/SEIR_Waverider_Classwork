@@ -13,7 +13,7 @@ class App extends Component {
             birdName: '',
             image: '',
             user: '',
-            approved: false
+            approved: ''
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -32,7 +32,7 @@ class App extends Component {
             approved: this.state.approved
         }
         this.setState({
-            birds: [ newBird, ...this.state.birds, newBird],
+            birds: [ newBird, ...this.state.birds],
             birdName: '',
             image: '',
             user: '',
@@ -56,8 +56,8 @@ class App extends Component {
                     </label>
                     <label htmlFor="approved"> Approved
                         <select>
-                            <option name="approved" value={this.state.approved}> Yes </option>
-                            <option name="approved" value={this.state.approved}> No </option>
+                            <option name="approved" value={this.state.approved}o onChange={this.handleChange}> Yes </option>
+                            <option name="approved" value={this.state.approved} onChange={this.handleChange}> No </option>
                         </select>
                     </label>
                     <input type="submit" />

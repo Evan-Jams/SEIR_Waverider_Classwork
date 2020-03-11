@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import DivThree from './DivThree'
 
 class DivTwo extends Component {
     render() {
         return(
             <div>
-                <h3 onClick={() => {this.props.changeIt(this.props.tardis.name)}} >{this.props.tardis.name}</h3>
+                <DivThree tardis={this.props.tardis} changeIt={this.props.changeIt}/>
+                <DivThree tardis={this.props.tardis} changeIt={this.props.changeIt}/>
             </div>
         )
     }

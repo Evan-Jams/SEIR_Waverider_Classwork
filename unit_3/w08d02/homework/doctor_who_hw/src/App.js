@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DivOne from './components/DivOne'
 import DivTwo from './components/DivTwo'
-import DivThree from './components/DivThree'
+
 
 class App extends Component {
     constructor (props){
