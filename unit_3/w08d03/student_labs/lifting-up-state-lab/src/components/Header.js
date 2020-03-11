@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default class AppHeader  extends React.Component{
+export default class AppHeader extends React.Component{
   render() {
     return (
       <nav className="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg"  color-on-scroll="100">
