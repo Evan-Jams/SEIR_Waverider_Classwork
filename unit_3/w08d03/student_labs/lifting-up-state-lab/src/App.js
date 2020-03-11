@@ -15,7 +15,7 @@ class App extends React.Component {
         return (
             <div className="App">
                 <AppHeader />
-                <AppMain h1="All of these can be dynamic h1" h2="This is the h2" h3="this is the h3">
+                <AppMain h1="Super Hero App" h2="List of Supers" h3="Good or Evil">
                     <CardContainer data={this.state.data}/>
                 </AppMain>
             </div>
