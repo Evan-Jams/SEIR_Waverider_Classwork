@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-
+import Card from "./Card.js"
 
 class CardList extends Component {
     render(){
         return(
             <ul>
-                cardList.js
+                <Card />
             </ul>
         )
     }
