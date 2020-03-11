@@ -6,8 +6,8 @@ class CardContainer extends Component {
     render(){
         return(
             <div>
-                <CardList />
-                <CardList />
+                <CardList data={this.props.data}/>
+                <CardList data={this.props.data}/>
             </div>
         )
     }

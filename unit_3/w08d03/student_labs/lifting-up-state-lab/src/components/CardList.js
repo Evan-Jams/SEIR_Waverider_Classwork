@@ -5,7 +5,14 @@ class CardList extends Component {
     render(){
         return(
             <ul>
-                <Card />
+                {
+                    this.props.data.map((person, i) => {
+                        return (
+                            <Card person={person} key={ i }/>
+                        )
+                    })
+                }
+
             </ul>
         )
     }
