@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-
+import DivOne from './components/DivOne'
+import DivTwo from './components/DivTwo'
+import DivThree from './components/DivThree'
 
 class App extends Component {
     constructor (props){
@@ -11,10 +13,6 @@ class App extends Component {
             }
         }
         this.changeIt = this.changeIt.bind(this)
-        this.handleChange = this.handleChange.bind(this)
-    }
-    handleChange(event) {
-        this.setState({ [event.target.name]: event.target.value})
     }
     changeIt (text) {
         if (this.state.tardis.caps) {
@@ -36,7 +34,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h3 name="name" onChange={this.handleChange} onClick={() => this.changeIt()} >{this.state.tardis.name}</h3>
+                <DivOne tardis={this.state.tardis} changeIt={this.changeIt}/>
             </div>
         )
     }
