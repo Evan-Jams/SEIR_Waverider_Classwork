@@ -5,7 +5,7 @@ class DivOne extends Component {
     render() {
         return(
             <div>
-                <DivTwo tardis={this.props.tardis} changeIt={this.props.changeIt}/>
+                <DivTwo />
             </div>
         )
     }

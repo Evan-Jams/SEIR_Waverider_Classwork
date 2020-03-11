@@ -7,7 +7,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <DivOne tardis={this.props.tardis} changeIt={this.changeIt}/>
+                <DivOne />
             </div>
         )
     }
