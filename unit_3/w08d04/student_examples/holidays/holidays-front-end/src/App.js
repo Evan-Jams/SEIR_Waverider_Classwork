@@ -6,7 +6,7 @@ import './css/index.css'
 // import pencil from './images/simpleiconDOTcom-pen-15-64x64.png'
 // import Show from './components/Show.js'
 // import UpdateForm from './components/UpdateForm.js'
-let baseURL = process.env.REACT_APP_BASEURL
+let baseURL = ''
 
 //alternate baseURL = 'https://fathomless-sierra-68956.herokuapp.com'
 
@@ -18,11 +18,45 @@ if (process.env.NODE_ENV === 'development') {
 
 console.log('current base URL:', baseURL)
 
+
+
+
 class App extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            holidays: []
+        }
+        this.getHolidays = this.getHolidays.bind(this)
+    }
+    componentDidMount(){
+        this.getHolidays()
+    }
+    async getHolidays(){
+        try {
+            let response = await fetch(`${baseURL}/holidays`)
+            let data = await response.json()
+            this.setState({holidays: data})
+        }catch(e){
+            console.error(e);
+        }
+    }
  render () {
    return (
      <div className='container'>
       <h1>Holidays! Celebrate!</h1>
+      <table>
+        <tbody>
+          { this.state.holidays.map(holiday => {
+              return (
+                <tr  key={holiday._id}>
+                  <td id={holiday._id}> {holiday.name }</td>
+                </tr>
+              )
+            })
+          }
+        </tbody>
+      </table>
      </div>
    )
  }
