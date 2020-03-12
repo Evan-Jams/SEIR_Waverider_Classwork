@@ -12,7 +12,7 @@ class App extends Component {
             random: 'random',
             answerHidden: true,
             total: 0,
-            clue: {}
+            clue: {},
         }
         this.fetchData = this.fetchData.bind(this)
         /*this.handleChange = this.handleChange.bind(this)*/
@@ -54,7 +54,8 @@ class App extends Component {
         return(
             <div className="main">
                 <h1>Welcome to Jeopardy!</h1>
-                {/*<h3>Category: {this.state.clue.category.title}</h3>*/}
+                {this.state.clue ? <h3>Category: {this.state.clue.category.id}</h3>
+                : <h3>Category: </h3>}
                 <h3>Question: </h3>
                 <h5>{this.state.clue.question}</h5>
                 <button onClick={() => {this.fetchData(this.state.random)}}>Get Random Question</button>
