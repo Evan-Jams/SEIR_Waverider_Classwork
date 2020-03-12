@@ -14,17 +14,17 @@ class App extends Component {
             clue: {}
         }
         this.fetchData = this.fetchData.bind(this)
-        this.handleChange = this.handleChange.bind(this)
+        /*this.handleChange = this.handleChange.bind(this)*/
         this.toggleData = this.toggleData.bind(this)
         this.updateScore = this.updateScore.bind(this)
 
     }
-    handleChange(event){
+    /*handleChange(event){
         this.setState({
             [event.target.id]: event.target.value
         })
 
-    }
+    }*/
     fetchData(data){
         this.setState({
             searchUrl: this.state.baseUrl + data
