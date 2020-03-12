@@ -54,8 +54,7 @@ class App extends Component {
         return(
             <div className="main">
                 <h1>Welcome to Jeopardy!</h1>
-                {this.state.clue ? <h3>Category: {this.state.clue.category.id}</h3>
-                : <h3>Category: </h3>}
+                
                 <h3>Question: </h3>
                 <h5>{this.state.clue.question}</h5>
                 <button onClick={() => {this.fetchData(this.state.random)}}>Get Random Question</button>
