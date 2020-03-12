@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Score from './components/Score.js'
+import './index.css'
 
 class App extends Component {
     constructor(props){
@@ -46,21 +47,18 @@ class App extends Component {
         event.preventDefault()
         console.log('ya clicked me!');
         event.target.id === 'correct' ? (
-            this.setState({total: this.state.total + this.state.clue.value}) ): event.target.id === 'incorrect' ? this.setState({total: this.state.total - this.state.clue.value}): event.target.id === 'reset' ? this.setState({total: 0}) : console.log('try again')
+            this.setState({total: this.state.total + this.state.clue.value}) ): event.target.id === 'incorrect' ? this.setState({total: this.state.total - this.state.clue.value}): event.target.id === 'reset' ? this.setState({total: 0, clue: {}}) : console.log('try again')
     }
 
     render() {
         return(
-            <div>
+            <div className="main">
                 <h1>Welcome to Jeopardy!</h1>
                 {/*<h3>Category: {this.state.clue.category.title}</h3>*/}
-                <h3>Question: {this.state.clue.question}</h3>
+                <h3>Question: </h3>
+                <h5>{this.state.clue.question}</h5>
                 <button onClick={() => {this.fetchData(this.state.random)}}>Get Random Question</button>
                 <h3>Value: {this.state.clue.value}</h3>
-                <h3>Let's play!</h3>
-                <div>
-                    <button onClick={this.fetchData}>Get Question</button>
-                </div>
                 <Score clue={this.state.clue} total={this.state.total} updateScore={this.updateScore}/>
 
                 {

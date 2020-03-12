@@ -1,0 +1,22 @@
+body {
+    background-color: #B3AAE7;
+}
+
+.main {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    border-bottom: 1px solid yellow;
+}
+h3 {
+    margin-bottom: 0;
+}
+
+button {
+    background-color: yellow
+}
