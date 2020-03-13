@@ -13,6 +13,7 @@ bookmarks.get('/', (req, res) => {
 })
 
 bookmarks.post('/', async (req, res) => {
+    console.log(req.body);
     Bookmark.create(req.body, (err, createdBookmark) => {
         if (err) {
             res.status(400).json({ error: err.message })
