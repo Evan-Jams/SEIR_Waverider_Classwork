@@ -31,6 +31,7 @@ class App extends React.Component {
         this.getHolidays = this.getHolidays.bind(this)
         this.handleAddHoliday = this.handleAddHoliday.bind(this)
         this.deleteHoliday = this.deleteHoliday.bind(this)
+        this.toggleCelebrated = this.toggleCelebrated.bind(this)
     }
     componentDidMount(){
         this.getHolidays()
@@ -67,6 +68,27 @@ class App extends React.Component {
         }
 
     }
+
+    async toggleCelebrated(holiday){
+        console.log(holiday)
+        try {
+            let response = await fetch(baseURL + '/holidays/' + holiday._id, {
+                method: 'PUT',
+                body: JSON.stringify({celebrated: !holiday.celebrated}),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            let updatedHoliday = await response.json()
+            const foundHoliday = this.state.holidays.findIndex(foundItem => foundItem._id === holiday._id)
+            const copyHolidays = [...this.state.holidays]
+            copyHolidays[foundHoliday].celebrated = updatedHoliday.celebrated
+            console.log(updatedHoliday);
+            this.setState({holidays: copyHolidays})
+        } catch (e) {
+            console.error(e);
+        }
+    }
  render () {
    return (
      <div className='container'>
@@ -76,8 +98,9 @@ class App extends React.Component {
         <tbody>
           { this.state.holidays.map(holiday => {
               return (
-                <tr  key={holiday._id}>
-                  <td id={holiday._id}> {holiday.name }</td>
+                <tr key={holiday._id}>
+                  <td id={holiday._id} onClick={()=> {this.toggleCelebrated(holiday)}}> {holiday.name } and it's {holiday.celebrated ? 'celebrated' : 'not celebrated'}</td>
+                  <td></td>
                   <td onClick={ () => { this.deleteHoliday(holiday._id) } }>X</td>
                 </tr>
               )
