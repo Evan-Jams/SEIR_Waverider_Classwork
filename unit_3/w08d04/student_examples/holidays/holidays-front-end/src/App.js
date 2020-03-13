@@ -30,6 +30,7 @@ class App extends React.Component {
         }
         this.getHolidays = this.getHolidays.bind(this)
         this.handleAddHoliday = this.handleAddHoliday.bind(this)
+        this.deleteHoliday = this.deleteHoliday.bind(this)
     }
     componentDidMount(){
         this.getHolidays()
@@ -47,8 +48,24 @@ class App extends React.Component {
       const copyHolidays = [holiday, ...this.state.holidays]
       this.setState({
         holidays: copyHolidays,
-        name: ''
       })
+    }
+
+    async deleteHoliday(id) {
+        console.log(`made delete request to here: ${baseURL}/holidays/${id}`)
+        try {
+            let response = await fetch(baseURL + '/holidays/' + id, {
+                method: 'DELETE'
+            })
+            let data = await response.json()
+            const foundHoliday = this.state.holidays.findIndex(holiday => holiday._id === id)
+            const copyHolidays = [...this.state.holidays]
+            copyHolidays.splice(foundHoliday, 1)
+            this.setState({holidays: copyHolidays})
+        } catch(e) {
+            console.error(e);
+        }
+
     }
  render () {
    return (
@@ -61,6 +78,7 @@ class App extends React.Component {
               return (
                 <tr  key={holiday._id}>
                   <td id={holiday._id}> {holiday.name }</td>
+                  <td onClick={ () => { this.deleteHoliday(holiday._id) } }>X</td>
                 </tr>
               )
             })
