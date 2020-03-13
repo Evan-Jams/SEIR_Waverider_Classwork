@@ -6,13 +6,9 @@ class App extends Component {
     constructor(props){
         super(props)
         this.state = {
-            baseUrl: 'http://jservice.io/api/',
-            searchUrl: '',
-            query: '?',
-            random: 'random',
             answerHidden: true,
             total: 0,
-            clue: {},
+            clue: [],
         }
         this.fetchData = this.fetchData.bind(this)
         /*this.handleChange = this.handleChange.bind(this)*/
@@ -26,20 +22,14 @@ class App extends Component {
         })
 
     }*/
-    fetchData(data){
-        this.setState({
-            searchUrl: this.state.baseUrl + data
-        },
-        () => {
-            fetch(this.state.searchUrl)
+    fetchData(){
+            fetch('http://jservice.io/api/random')
             .then((response) => {
                 return response.json()
             })
             .then(json => this.setState({clue: json[0], answerHidden: true}),
                 (err) => console.log(err))
         }
-        )
-    }
     toggleData(){
         this.setState({answerHidden: !this.state.answerHidden})
     }
@@ -54,7 +44,8 @@ class App extends Component {
         return(
             <div className="main">
                 <h1>Welcome to Jeopardy!</h1>
-                
+                {this.state.clue.category ? <h3>Category: {this.state.clue.category.title}</h3>
+                : <h3>Category: </h3>}
                 <h3>Question: </h3>
                 <h5>{this.state.clue.question}</h5>
                 <button onClick={() => {this.fetchData(this.state.random)}}>Get Random Question</button>
