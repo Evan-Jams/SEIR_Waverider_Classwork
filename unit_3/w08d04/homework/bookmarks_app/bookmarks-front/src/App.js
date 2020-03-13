@@ -44,12 +44,12 @@ class App extends Component {
     }
     render(){
         return (
-            <div>
+            <div className="main">
                 <header>Bookmark Your Favorite Places!</header>
-                <div>
+                <div className="form-container">
                     <NewForm handleAddBookmark={this.handleAddBookmark} baseURL={baseURL}/>
                 </div>
-                <div>
+                <div className="list">
                     <ul>
                         {
                             this.state.bookmarks.map(bookmark => {
@@ -62,7 +62,6 @@ class App extends Component {
                         }
                     </ul>
                 </div>
-                <footer>footer</footer>
             </div>
         )
     }

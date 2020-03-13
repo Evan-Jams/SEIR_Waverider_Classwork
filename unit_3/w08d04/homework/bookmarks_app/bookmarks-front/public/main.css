@@ -1,3 +1,73 @@
 * {
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+.main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background: lightblue;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px gainsboro,
+               -3px 3px 5px gainsboro;
+}
+
+.form-container {
+    text-align: center;
+    width: 100%;
+    margin: 5% auto;
+}
+
+form {
+    width: 100%;
+    margin: auto;
+}
+
+input {
+    height: 30px;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: gainsboro;
+    width: 125px;
+    height: 35px;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 3px gainsboro;
+}
+
+.list {
+    border: 1px solid grey;
+    width: 80%;
+    margin: 5% auto;
+}
+
+ul {
+    width: 90%;
+    list-style: none;
+    padding-left: 0;
+    margin: 2% auto;
+}
+
+li {
+    margin: 10px 0;
+    border-bottom: 1px solid grey;
+}
+
+a {
+    text-decoration: none;
 }
