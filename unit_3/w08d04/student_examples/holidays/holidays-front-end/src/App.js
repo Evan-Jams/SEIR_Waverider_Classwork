@@ -101,7 +101,6 @@ class App extends React.Component {
       <h1>Holidays! Celebrate!</h1>
       <NewForm handleAddHoliday={this.handleAddHoliday} baseURL={baseURL}/>
       <table>
-
         <tbody>
           { this.state.holidays.map(holiday => {
               return (

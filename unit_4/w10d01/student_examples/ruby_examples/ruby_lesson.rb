@@ -138,10 +138,86 @@ puts new_arr
 #     a -= 1
 # end
 
+# javascript
+# const each = (array, callback)=>{
+# 	for(let i = 0; i < array.length; i++){
+# 		callback(array[i]);
+# 	}
+# }
+#
+# each([1,2,3,4], (currentNum)=>{
+# 	console.log(currentNum);
+# });
+
+# def each (arr, &blk)
+#   for elem in arr
+#     blk.call(elem)
+#   end
+# end
+#
+# each 0...5 do |currentNum|
+#   puts currentNum
+# end
+
+# log = Proc.new do |el|
+#   puts el
+# end
+
+# or
+
+# log = Proc.new { |el| puts el }
+# log.call(5)
+
+
+# foo = Proc.new do
+#   puts "hi"
+# end
+#
+# def bar(callback)
+#   callback.call()
+# end
+
+# bar(foo)
+
+# # Select - Returns an array containing all elements of an array for which the given block returns a true value.
+# p [1,2,3,4,5].select { |i| i > 3 } #returns [4,5]
+#
+
+# # Detect - Returns the first element of an array for which the block is true.
+# p [1,2,3,4,5].detect { |i| i > 3 } #returns [4]
+#
+
+# # Reject - Returns an array for all elements of an array for which the given block returns false.
+# p [1,2,3,4,5].reject { |i| i > 3 } #returns [1,2,3]
+
+# # GREP
+# #Returns an array of every element in the array for which Pattern === element
+# p [1,3,5,10,15].grep (1..5) #returns [1,3,5]
+# p [0.3, "three", :three, "thirty-three"].grep /three/ #returns ["three", :three, "thirty-three"]
+#
+# #You can also add a block to pass each matching element through
+ # p [1,3,5,10,15].grep (1..5) {|i| i * 3} #returns [3,9,15]
+#
 
 
 
 
+## Sample method
+
+array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 'hi']
+array2 = []
+
+# if no params, returns object. if has params, returns array
+
+# p array.sample
+# p array.sample(4)
+# p array.sample(random: Random.new(1))
+# p array.sample(6, random: Random.new(1))
+
+# p array2.sample
+# p array2.sample(1)
+# p array
+# p array2
 
 
 

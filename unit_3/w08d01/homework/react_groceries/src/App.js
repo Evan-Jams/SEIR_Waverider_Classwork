@@ -15,6 +15,7 @@ class App extends Component {
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.toggleCheckbox = this.toggleCheckbox.bind(this)
+        this.buyItem = this.buyItem.bind(this)
     }
     handleChange(event){
         this.setState({ [ event.target.id ]: event.target.value })
@@ -46,7 +47,12 @@ class App extends Component {
     toggleCheckbox() {
         this.setState({isPurchased: !this.state.isPurchased})
     }
+    buyItem(item){
+        item.isPurchased = !item.isPurchased
+        this.setState({isPurchased: item.isPurchased})
+  }
     render() {
+        console.log(this.state.isPurchased);
         return (
             <div className="main-container">
                 <h1>Grocery List</h1>
@@ -75,11 +81,37 @@ class App extends Component {
                 <ul>
                     {this.state.groceryItems.map((item, i) =>
                         <li key={ i }>
-                            <h2>{item.item}</h2>
-                            <h4><span>Brand:</span> {item.brand}</h4>
-                            <h4><span>Units:</span> {item.units}</h4>
-                            <h4><span>Quantity:</span> {item.quantity}</h4>
-                            <button type="button" value="purchase">Purchase</button>
+                        {
+                            item.isPurchased
+                            ? ""
+                            : <h2>{item.item}</h2>
+
+                        }
+                        {
+                            item.isPurchased
+                            ? ""
+                            : <h4><span>Brand:</span> {item.brand}</h4>
+                        }
+                        {
+                            item.isPurchased
+                            ? ""
+                            : <h4><span>Units:</span> {item.units}</h4>
+                        }
+                        {
+                            item.isPurchased
+                            ? ""
+                            : <h4><span>Quantity:</span> {item.quantity}</h4>
+                        }
+                        {
+                            item.isPurchased
+                            ? ""
+                            : 'button'
+                        }
+
+
+
+
+
                         </li>
                     )}
                 </ul>
