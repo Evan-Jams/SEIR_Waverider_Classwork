@@ -124,15 +124,48 @@ end
 #########################################################################
 # Euler Problem 1
 #########################################################################
-total = 0
 
-1000.times do |i|
-  if i % 3 == 0 || i % 5 == 0
-    total += i
+# total = 0
+#
+# 1000.times do |i|
+#   if i % 3 == 0 || i % 5 == 0
+#     total += i
+#   end
+# end
+#
+# puts total
+
+#########################################################################
+# Primes
+#########################################################################
+# require 'prime'
+#
+# Prime.each(100) do |prime|
+#   p prime
+# end
+
+def get_primes(num)
+  if num % 2 == 0 && num != 2 || num == 1
+    false
+  elsif num % 3 == 0 && num != 3
+    false
+  elsif num % 5 == 0 && num != 5
+    false
+  elsif num % 7 == 0 && num != 7
+    false
+  elsif num % 11 == 0 && num != 11
+    false
+  elsif Math.sqrt(num) == Integer
+    false
+  else
+    true
   end
 end
 
-puts total
+
+# 100.times { |i| p get_primes(i) && i}
+
+
 
 
 # end
