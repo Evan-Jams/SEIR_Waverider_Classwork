@@ -5,6 +5,9 @@ adjective = "Big Bad"
 # puts "Hello #{adjective} World"
 
 ##############################################################################
+# Nums Array
+#########################################################################
+
 
 nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0, 35, 19, 66, 3, 22, 21, 4, 4, 4, 0, 1, 2, 3, 4, 12, 15]
 
@@ -46,6 +49,9 @@ nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0, 35, 19, 66, 3, 22, 21, 4, 4, 4
 
 
 #########################################################################
+# Colors Array
+#########################################################################
+
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 
@@ -53,9 +59,25 @@ colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 
 # p colors.reverse
 
-p colors.map { |elem| elem.capitalize  }
+# p colors.map { |elem| elem.capitalize }
 
+#########################################################################
+# Methods
+#########################################################################
 
+def find_area height, width
+  height * width
+end
+
+# p find_area 5, 10
+
+nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+
+def multiply_each_by_five arr
+  arr.each { |el| p el * 5 }
+end
+
+# multiply_each_by_five nums
 
 
 # end
