@@ -1,0 +1,63 @@
+$light-pink   : #fcdcfa;
+$purp         : #d88fff;
+$light-grey   : #c9c9c9;
+
+
+* {
+  border: 1px solid $light-pink;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  height: 70%;
+  width: 40%;
+}
+
+.display {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    height: 85%;
+    width: 95%;
+    background: $light-pink;
+    opacity: 70%;
+    border-radius: 10px;
+  }
+
+}
+
+.numbers-container {
+  height: 75%;
+
+  div {
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1% 2%;
+
+    button {
+      width: 20%;
+      border-radius: 50%;
+      box-shadow: 2px 2px 7px gainsboro;
+      font-size: 2em;
+      background: radial-gradient(white, $light-grey);
+    }
+    .symbol {
+      background: radial-gradient(white, $light-pink);
+    }
+    #equals {
+      background: radial-gradient(white, $purp);
+    }
+  }
+}

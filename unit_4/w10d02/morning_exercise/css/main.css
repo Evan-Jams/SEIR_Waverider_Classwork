@@ -1,0 +1,56 @@
+* {
+  border: 1px solid #fcdcfa;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  height: 70%;
+  width: 40%;
+}
+
+.display {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.display div {
+  height: 85%;
+  width: 95%;
+  background: #fcdcfa;
+  opacity: 70%;
+  border-radius: 10px;
+}
+
+.numbers-container {
+  height: 75%;
+}
+.numbers-container div {
+  height: 25%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1% 2%;
+}
+.numbers-container div button {
+  width: 20%;
+  border-radius: 50%;
+  box-shadow: 2px 2px 7px gainsboro;
+  font-size: 2em;
+  background: radial-gradient(white, #c9c9c9);
+}
+.numbers-container div .symbol {
+  background: radial-gradient(white, #fcdcfa);
+}
+.numbers-container div #equals {
+  background: radial-gradient(white, #d88fff);
+}
+
+/*# sourceMappingURL=main.css.map */
