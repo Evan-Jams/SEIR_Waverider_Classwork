@@ -4,6 +4,7 @@
 adjective = "Big Bad"
 # puts "Hello #{adjective} World"
 
+##############################################################################
 
 nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0, 35, 19, 66, 3, 22, 21, 4, 4, 4, 0, 1, 2, 3, 4, 12, 15]
 
@@ -43,6 +44,16 @@ nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0, 35, 19, 66, 3, 22, 21, 4, 4, 4
 
 # p nums.select { |num| num != 0 && num % 5 == 0 }
 
+
+#########################################################################
+
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+
+# p colors.sample
+
+# p colors.reverse
+
+p colors.map { |elem| elem.capitalize  }
 
 
 
