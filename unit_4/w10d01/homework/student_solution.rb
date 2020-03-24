@@ -121,9 +121,18 @@ end
 # print_item_sums lamp, table
 # print_item_sums table, book
 
+#########################################################################
+# Euler Problem 1
+#########################################################################
+total = 0
 
+1000.times do |i|
+  if i % 3 == 0 || i % 5 == 0
+    total += i
+  end
+end
 
-
+puts total
 
 
 # end
