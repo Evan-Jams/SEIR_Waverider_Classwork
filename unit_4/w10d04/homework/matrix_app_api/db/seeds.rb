@@ -8,9 +8,9 @@
 
 Character.create([
 
-	{ name: "Neo", description: false },
-	{ name: "Trinity", description: false },
-	{ name: "Morpheus", description: false },
-	{ name: "Agent Smith", description: false },
+	{ name: "Neo", description: "Thomas A. Anderson was born in Lower Downtown, Capital City, USA on March 11, 1962" },
+	{ name: "Trinity", description: "Trinity is a computer programmer and a hacker who has escaped from the Matrix" },
+	{ name: "Morpheus", description: "The name Morpheus is that of the god of dreams in Greek mythology, which is consistent with the character's involvement with the 'dreaming' of the Matrix." },
+	{ name: "Agent Smith", description: "Smith began as an Agent, an AI program in the Matrix programmed to keep order within the system" },
 
 ])
