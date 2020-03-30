@@ -28,6 +28,7 @@ class SongsController < ApplicationController
     song = Song.destroy(params[:id])
     render json: {status: 204}
   end
+  
   private
 
   def song_params
