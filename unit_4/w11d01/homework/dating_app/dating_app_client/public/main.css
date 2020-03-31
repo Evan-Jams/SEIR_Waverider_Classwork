@@ -1,0 +1,33 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.header {
+  height: 12%;
+  border-bottom: 1px solid black;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.people {
+  width: 20%;
+  height: 90%;
+  overflow: scroll;
+}
+
+.dating-pedestal {
+  width: 60%;
+  height: 90vh;
+  border: 1px solid black;
+}
+
+img {
+  height: %;
+}

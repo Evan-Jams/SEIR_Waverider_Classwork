@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import './App.css';
 import Daters from './components/Hello.js'
+import Header from './components/Header.js'
+import Form from './components/Form.js'
+import Match from './components/Match.js'
 
 class App extends Component {
   constructor(props){
@@ -12,7 +14,19 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Daters />
+        <Header />
+        <div className="main-content">
+          <div className="people">
+            <Daters />
+          </div>
+          <div className="dating-pedestal">
+            <Match />
+          </div>
+          <div className="people">
+            <Daters />
+          </div>
+        </div>
+        <Form />
       </div>
     )
   }
