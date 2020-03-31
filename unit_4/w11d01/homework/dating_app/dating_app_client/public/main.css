@@ -42,6 +42,10 @@ span {
   width: 55%;
   height: 90vh;
   border: 1px solid grey;
+  box-shadow: 4px 4px 5px gainsboro,
+              -4px 4px 5px gainsboro,
+              4px -4px 5px gainsboro,
+              -4px -4px 5px gainsboro;
 }
 
 .dater {
