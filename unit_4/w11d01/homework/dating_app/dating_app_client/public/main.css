@@ -3,7 +3,7 @@
 }
 
 .App {
-  height: 100vh;
+  height: 150vh;
   width: 100vw;
   text-align: center;
 }
@@ -14,7 +14,7 @@
   align-items: center;
   height: 15%;
   border-bottom: 1px solid black;
-  background-color: white;
+  background-color: #d7f4fc;
   box-shadow: 0 6px 8px grey;
   margin-bottom: 1%;
 }
@@ -36,21 +36,21 @@ span {
   height: 90%;
   border: 1px solid grey;
   overflow: scroll;
+  box-shadow: inset 0 0 3px 4px gainsboro;
+  background-color: #ffffed;
 }
 
 .dating-pedestal {
   width: 55%;
   height: 90vh;
   border: 1px solid grey;
-  box-shadow: 4px 4px 5px gainsboro,
-              -4px 4px 5px gainsboro,
-              4px -4px 5px gainsboro,
-              -4px -4px 5px gainsboro;
+  box-shadow: 0 0 5px 5px gainsboro;
+  background-color: #fff;
 }
 
 .dater {
-  margin: 10px 0;
-  padding: 10px
+  margin: 10px;
+  border-bottom: 1px solid grey;
 }
 
 .dater:hover {
@@ -58,11 +58,14 @@ span {
 }
 
 img {
-  height: 70%;
+  height: 65%;
   border-radius: 50%;
 }
 
 /* Footer Input *************************/
+footer {
+  height: 15%
+}
 
 form {
   width: 100%;

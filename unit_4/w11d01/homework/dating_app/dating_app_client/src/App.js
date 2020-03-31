@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Daters from './components/Dater.js'
 import Header from './components/Header.js'
-import Form from './components/Form.js'
+import Footer from './components/Footer.js'
 import Match from './components/Match.js'
 
 class App extends Component {
@@ -26,7 +26,7 @@ class App extends Component {
             <Daters />
           </div>
         </div>
-        <Form />
+        <Footer />
       </div>
     )
   }
