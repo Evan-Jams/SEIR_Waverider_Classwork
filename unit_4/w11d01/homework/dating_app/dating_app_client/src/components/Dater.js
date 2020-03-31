@@ -29,7 +29,7 @@ class Daters extends Component {
         {
           this.state.daters.map(dater => {
             return (
-              <div key={dater.id}>
+              <div className="dater" key={dater.id}>
                 <h3>Name: {dater.name} </h3>
                 <img src={dater.img} alt={dater.name}/>
                 <h4>Starsign: {dater.starsign} </h4>

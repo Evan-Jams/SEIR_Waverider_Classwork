@@ -1,12 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   height: 100vh;
   width: 100vw;
   text-align: center;
 }
 
-.header {
-  height: 12%;
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
   border-bottom: 1px solid black;
+  background-color: white;
+  box-shadow: 0 6px 8px grey;
+  margin-bottom: 1%;
+}
+
+span {
+  font-size: 75%;
+  font-style: italic;
 }
 
 .main-content {
@@ -19,15 +34,45 @@
 .people {
   width: 20%;
   height: 90%;
+  border: 1px solid grey;
   overflow: scroll;
 }
 
 .dating-pedestal {
-  width: 60%;
+  width: 55%;
   height: 90vh;
-  border: 1px solid black;
+  border: 1px solid grey;
+}
+
+.dater {
+  margin: 10px 0;
+  padding: 10px
+}
+
+.dater:hover {
+  animation-name: grow;
 }
 
 img {
-  height: %;
+  height: 70%;
+  border-radius: 50%;
+}
+
+/* Footer Input *************************/
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  width: 40%;
+}
+
+@keyframes grow {
+  from {transform: scale(1)}
+  to {transform: scale(1.2)}
 }
