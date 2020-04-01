@@ -16,6 +16,7 @@ class LineChart extends Component {
       console.error(err)
     }
   }
+
   prepareData (data) {
     const chartData = {
         labels: [],
@@ -36,7 +37,7 @@ class LineChart extends Component {
      chartData.datasets[1].data.push(pint.pints_made)
     })
     return chartData
-   }
+  }
 
   createChart(data){
     const ctx = document.querySelector(`#pints-${this.props.id}`)
@@ -46,6 +47,7 @@ class LineChart extends Component {
     })
     return pintsChart
   }
+
   render(){
     return(
       <>
