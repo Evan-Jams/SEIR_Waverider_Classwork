@@ -14,7 +14,19 @@ class Post extends React.Component {
   render () {
     return (
       <article>
-        this is the post component
+        <div className="post-header">
+          <img src={this.props.post.image} alt="img"/>
+          <h1>{this.props.name} said...</h1>
+        </div>
+        <div className="post-body">
+          {this.props.post.body}
+        </div>
+        <div className="post-options">
+          <ul>
+            <li onClick={() => {this.props.handleView('editPost', this.props.post)}}>edit post</li>
+            <li>delete post</li>
+          </ul>
+        </div>
       </article>
     )
   }

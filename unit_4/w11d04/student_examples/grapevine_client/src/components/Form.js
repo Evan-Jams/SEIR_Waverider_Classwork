@@ -21,6 +21,15 @@ class Form extends React.Component {
     }
   }
 
+  componentDidMount(){
+    this.setState({
+      name: this.props.formInputs.name,
+      image: this.props.formInputs.image,
+      body: this.props.formInputs.body,
+      id: this.props.formInputs.id
+    })
+  }
+  
   // ==============
   // HANDLERS
   // ==============
@@ -32,7 +41,7 @@ class Form extends React.Component {
   // handles submit
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log('submitted!')
+    this.props.handleCreate(this.state)
   }
 
   // ==============
@@ -43,15 +52,29 @@ class Form extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           name
-          <input type="text" placeholder="your name" id="name" value={this.state.name} onChange={this.handleChange}/>
+          <input
+            type="text"
+            placeholder="your name"
+            id="name"
+            value={this.state.name}
+            onChange={this.handleChange}/>
         </label>
         <label>
           image
-          <input type="text" placeholder="your image" id="image" value={this.state.image} onChange={this.handleChange}/>
+          <input
+            type="text"
+            placeholder="your image"
+            id="image"
+            value={this.state.image}
+            onChange={this.handleChange}/>
         </label>
         <label id="post-form">
           post
-          <textarea placeholder="write your words" id="body" value={this.state.body} onChange={this.handleChange}></textarea>
+          <textarea
+            placeholder="write your words"
+            id="body"
+            value={this.state.body}
+            onChange={this.handleChange}></textarea>
         </label>
         <input type="submit" value="share"/>
       </form>
