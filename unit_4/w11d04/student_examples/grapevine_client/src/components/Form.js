@@ -29,7 +29,7 @@ class Form extends React.Component {
       id: this.props.formInputs.id
     })
   }
-  
+
   // ==============
   // HANDLERS
   // ==============
@@ -40,9 +40,17 @@ class Form extends React.Component {
 
   // handles submit
   handleSubmit = (e) => {
-    e.preventDefault()
+  // prevent default form submit action
+  e.preventDefault()
+  // if the view is currently addPost
+  if(this.props.view.page === 'addPost') {
+    // create a post
     this.props.handleCreate(this.state)
+  } else if(this.props.view.page === 'editPost') { // else if the view is editPost
+    // update the post
+    this.props.handleUpdate(this.state)
   }
+}
 
   // ==============
   // RENDER

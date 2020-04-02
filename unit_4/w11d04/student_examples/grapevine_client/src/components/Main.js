@@ -44,6 +44,34 @@ class Main extends React.Component {
       }
     })
   }
+
+  handleUpdate = async updateData => {
+    let response = await fetch(`http://localhost/posts/${updateData.id}`, {
+      body: JSON.stringify(updateData),
+      method: 'PUT',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+    await response.json()
+    this.props.handleView('home')
+    this.fetchPosts()
+  }
+
+  handleDelete = async id => {
+    let response = await fetch(`http://localhost:3000/posts/${id}`, {
+      method: 'DELETE',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+    this.setState(prevState => {
+      const posts = prevState.posts.filter(post => post.id !== id)
+      return { posts }
+    })
+  }
   // ==============
   // RENDER
   // ==============
@@ -58,11 +86,14 @@ class Main extends React.Component {
             key={post.id}
             post={post}
             handleView={this.props.handleView}
+            handleDelete={this.handleDelete}
           />
         ))
         : <Form
             handleCreate={this.handleCreate}
             formInputs={this.props.formInputs}
+            handleUpdate={this.handleUpdate}
+            view={this.props.view}
           />
       }
       </main>

@@ -24,7 +24,7 @@ class Post extends React.Component {
         <div className="post-options">
           <ul>
             <li onClick={() => {this.props.handleView('editPost', this.props.post)}}>edit post</li>
-            <li>delete post</li>
+            <li onClick={() => {this.props.handleDelete(this.props.post.id)}}>delete post</li>
           </ul>
         </div>
       </article>
